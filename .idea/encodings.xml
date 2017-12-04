@@ -2,6 +2,13 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/archetype-multimodule" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-domain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-persist" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-utils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-manager/auth-manager-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-manager/auth-manager-domain" charset="UTF-8" />

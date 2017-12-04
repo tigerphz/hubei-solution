@@ -10,10 +10,18 @@
         <option value="$PROJECT_DIR$/system-manager/system-manager-web/pom.xml" />
         <option value="$PROJECT_DIR$/auth-manager/auth-manager-service/pom.xml" />
         <option value="$PROJECT_DIR$/user-manager/user-manager-service/pom.xml" />
+        <option value="$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-model/pom.xml" />
+        <option value="$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-persist/pom.xml" />
+        <option value="$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-service/pom.xml" />
+        <option value="$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-service-api/pom.xml" />
+        <option value="$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources/module-utils/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/archetype-multimodule/pom.xml" />
+        <option value="$PROJECT_DIR$/auth-manager/pom.xml" />
         <option value="$PROJECT_DIR$/centrolized-plan/pom.xml" />
       </set>
     </option>

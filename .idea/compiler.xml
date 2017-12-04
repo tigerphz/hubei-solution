@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/archetype-multimodule/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="auth-manager-core" />
-        <module name="auth-manager-domain" />
-        <module name="auth-manager-model" />
-        <module name="auth-manager-persist" />
-        <module name="auth-manager-service" />
-        <module name="auth-manager-utils" />
         <module name="centralized-plan-core" />
         <module name="centralized-plan-domain" />
         <module name="centralized-plan-model" />
@@ -39,6 +36,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="archetype-multimodule" target="1.5" />
       <module name="auth-manager" target="1.5" />
       <module name="auth-manager-core" target="1.5" />
       <module name="auth-manager-domain" target="1.5" />
@@ -59,6 +57,12 @@
       <module name="hubei-solution-framework" target="1.5" />
       <module name="hubei-solution-framework-security" target="1.5" />
       <module name="hubei-solution-parent" target="1.5" />
+      <module name="module-domain" target="1.5" />
+      <module name="module-model" target="1.5" />
+      <module name="module-persist" target="1.5" />
+      <module name="module-service" target="1.5" />
+      <module name="module-service-api" target="1.5" />
+      <module name="module-utils" target="1.5" />
       <module name="system-manager" target="1.5" />
       <module name="system-manager-core" target="1.5" />
       <module name="system-manager-domain" target="1.5" />

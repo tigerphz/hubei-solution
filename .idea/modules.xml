@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-core/auth-manager-core.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-core/auth-manager-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-domain/auth-manager-domain.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-domain/auth-manager-domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-model/auth-manager-model.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-model/auth-manager-model.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-persist/auth-manager-persist.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-persist/auth-manager-persist.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-service/auth-manager-service.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-service/auth-manager-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-utils/auth-manager-utils.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-utils/auth-manager-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan.iml" />
       <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-core/centralized-plan-core.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-core/centralized-plan-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-domain/centralized-plan-domain.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-domain/centralized-plan-domain.iml" />

@@ -21,6 +21,5 @@
     <module>system-manager</module>
     <module>hubei-solution-framework</module>
     <module>user-manager</module>
-    <module>auth-manager</module>
   </modules>
 </project>
