@@ -36,14 +36,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="archetype-multimodule" target="1.5" />
-      <module name="auth-manager" target="1.5" />
-      <module name="auth-manager-core" target="1.5" />
-      <module name="auth-manager-domain" target="1.5" />
-      <module name="auth-manager-model" target="1.5" />
-      <module name="auth-manager-persist" target="1.5" />
-      <module name="auth-manager-service" target="1.5" />
-      <module name="auth-manager-utils" target="1.5" />
       <module name="centralized-plan" target="1.5" />
       <module name="centralized-plan-core" target="1.5" />
       <module name="centralized-plan-domain" target="1.5" />
@@ -57,12 +49,6 @@
       <module name="hubei-solution-framework" target="1.5" />
       <module name="hubei-solution-framework-security" target="1.5" />
       <module name="hubei-solution-parent" target="1.5" />
-      <module name="module-domain" target="1.5" />
-      <module name="module-model" target="1.5" />
-      <module name="module-persist" target="1.5" />
-      <module name="module-service" target="1.5" />
-      <module name="module-service-api" target="1.5" />
-      <module name="module-utils" target="1.5" />
       <module name="system-manager" target="1.5" />
       <module name="system-manager-core" target="1.5" />
       <module name="system-manager-domain" target="1.5" />
