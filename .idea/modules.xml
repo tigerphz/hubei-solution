@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-core/auth-manager-core.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-core/auth-manager-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-domain/auth-manager-domain.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-domain/auth-manager-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-model/auth-manager-model.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-model/auth-manager-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-persist/auth-manager-persist.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-persist/auth-manager-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-service/auth-manager-service.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-service/auth-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-manager/auth-manager-utils/auth-manager-utils.iml" filepath="$PROJECT_DIR$/auth-manager/auth-manager-utils/auth-manager-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-core/centralized-plan-core.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-core/centralized-plan-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-domain/centralized-plan-domain.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-domain/centralized-plan-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-model/centralized-plan-model.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-model/centralized-plan-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-persist/centralized-plan-persist.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-persist/centralized-plan-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-service/centralized-plan-service.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-service/centralized-plan-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-utils/centralized-plan-utils.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-utils/centralized-plan-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centralized-plan/centralized-plan-web/centralized-plan-web.iml" filepath="$PROJECT_DIR$/centralized-plan/centralized-plan-web/centralized-plan-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hubei-solution.iml" filepath="$PROJECT_DIR$/hubei-solution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hubei-solution-eurekaserver/hubei-solution-eurekaserver.iml" filepath="$PROJECT_DIR$/hubei-solution-eurekaserver/hubei-solution-eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hubei-solution-framework/hubei-solution-framework.iml" filepath="$PROJECT_DIR$/hubei-solution-framework/hubei-solution-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hubei-solution-framework/hubei-solution-framework-security/hubei-solution-framework-security.iml" filepath="$PROJECT_DIR$/hubei-solution-framework/hubei-solution-framework-security/hubei-solution-framework-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hubei-solution-parent/hubei-solution-parent.iml" filepath="$PROJECT_DIR$/hubei-solution-parent/hubei-solution-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager.iml" filepath="$PROJECT_DIR$/system-manager/system-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager-core/system-manager-core.iml" filepath="$PROJECT_DIR$/system-manager/system-manager-core/system-manager-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager-domain/system-manager-domain.iml" filepath="$PROJECT_DIR$/system-manager/system-manager-domain/system-manager-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager-model/system-manager-model.iml" filepath="$PROJECT_DIR$/system-manager/system-manager-model/system-manager-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager-persist/system-manager-persist.iml" filepath="$PROJECT_DIR$/system-manager/system-manager-persist/system-manager-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager-service/system-manager-service.iml" filepath="$PROJECT_DIR$/system-manager/system-manager-service/system-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager-utils/system-manager-utils.iml" filepath="$PROJECT_DIR$/system-manager/system-manager-utils/system-manager-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system-manager/system-manager-web/system-manager-web.iml" filepath="$PROJECT_DIR$/system-manager/system-manager-web/system-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-manager/user-manager.iml" filepath="$PROJECT_DIR$/user-manager/user-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-manager/user-manager-core/user-manager-core.iml" filepath="$PROJECT_DIR$/user-manager/user-manager-core/user-manager-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-manager/user-manager-domain/user-manager-domain.iml" filepath="$PROJECT_DIR$/user-manager/user-manager-domain/user-manager-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-manager/user-manager-model/user-manager-model.iml" filepath="$PROJECT_DIR$/user-manager/user-manager-model/user-manager-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-manager/user-manager-persist/user-manager-persist.iml" filepath="$PROJECT_DIR$/user-manager/user-manager-persist/user-manager-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-manager/user-manager-service/user-manager-service.iml" filepath="$PROJECT_DIR$/user-manager/user-manager-service/user-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-manager/user-manager-utils/user-manager-utils.iml" filepath="$PROJECT_DIR$/user-manager/user-manager-utils/user-manager-utils.iml" />
+    </modules>
+  </component>
+</project>

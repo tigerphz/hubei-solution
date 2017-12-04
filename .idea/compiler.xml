@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="auth-manager-core" />
+        <module name="auth-manager-domain" />
+        <module name="auth-manager-model" />
+        <module name="auth-manager-persist" />
+        <module name="auth-manager-service" />
+        <module name="auth-manager-utils" />
+        <module name="centralized-plan-core" />
+        <module name="centralized-plan-domain" />
+        <module name="centralized-plan-model" />
+        <module name="centralized-plan-persist" />
+        <module name="centralized-plan-service" />
+        <module name="centralized-plan-utils" />
+        <module name="centralized-plan-web" />
+        <module name="hubei-solution-eurekaserver" />
+        <module name="hubei-solution-EurekaServer" />
+        <module name="hubei-solution-framework-security" />
+        <module name="system-manager-core" />
+        <module name="system-manager-domain" />
+        <module name="system-manager-model" />
+        <module name="system-manager-persist" />
+        <module name="system-manager-service" />
+        <module name="system-manager-utils" />
+        <module name="system-manager-web" />
+        <module name="user-manager-core" />
+        <module name="user-manager-domain" />
+        <module name="user-manager-model" />
+        <module name="user-manager-persist" />
+        <module name="user-manager-root" />
+        <module name="user-manager-service" />
+        <module name="user-manager-utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="auth-manager" target="1.5" />
+      <module name="auth-manager-core" target="1.5" />
+      <module name="auth-manager-domain" target="1.5" />
+      <module name="auth-manager-model" target="1.5" />
+      <module name="auth-manager-persist" target="1.5" />
+      <module name="auth-manager-service" target="1.5" />
+      <module name="auth-manager-utils" target="1.5" />
+      <module name="centralized-plan" target="1.5" />
+      <module name="centralized-plan-core" target="1.5" />
+      <module name="centralized-plan-domain" target="1.5" />
+      <module name="centralized-plan-model" target="1.5" />
+      <module name="centralized-plan-persist" target="1.5" />
+      <module name="centralized-plan-service" target="1.5" />
+      <module name="centralized-plan-utils" target="1.5" />
+      <module name="centralized-plan-web" target="1.5" />
+      <module name="hubei-solution" target="1.5" />
+      <module name="hubei-solution-eurekaserver" target="1.5" />
+      <module name="hubei-solution-framework" target="1.5" />
+      <module name="hubei-solution-framework-security" target="1.5" />
+      <module name="hubei-solution-parent" target="1.5" />
+      <module name="system-manager" target="1.5" />
+      <module name="system-manager-core" target="1.5" />
+      <module name="system-manager-domain" target="1.5" />
+      <module name="system-manager-model" target="1.5" />
+      <module name="system-manager-persist" target="1.5" />
+      <module name="system-manager-service" target="1.5" />
+      <module name="system-manager-utils" target="1.5" />
+      <module name="system-manager-web" target="1.5" />
+      <module name="user-manager" target="1.5" />
+      <module name="user-manager-core" target="1.5" />
+      <module name="user-manager-domain" target="1.5" />
+      <module name="user-manager-model" target="1.5" />
+      <module name="user-manager-persist" target="1.5" />
+      <module name="user-manager-service" target="1.5" />
+      <module name="user-manager-utils" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

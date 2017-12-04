@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>hubei.solution.parent</artifactId>
+        <groupId>com.boco.hubei.solution</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../hubei-solution-parent</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>system.manager.root</artifactId>
+    <packaging>pom</packaging>
+
+    <name>system.manager.root</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>system-manager-core</module>
+        <module>system-manager-domain</module>
+        <module>system-manager-persist</module>
+        <module>system-manager-model</module>
+        <module>system-manager-utils</module>
+        <module>system-manager-service</module>
+        <module>system-manager-web</module>
+    </modules>
+
+</project>

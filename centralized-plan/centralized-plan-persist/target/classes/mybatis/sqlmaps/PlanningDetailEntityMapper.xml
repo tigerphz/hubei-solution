@@ -1,0 +1,2514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="centralized.plan.persist.daomapper.PlanningDetailEntityMapper">
+  <resultMap id="BaseResultMap" type="centralized.plan.model.PlanningDetailEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="workid" jdbcType="INTEGER" property="workid" />
+    <result column="categoryid" jdbcType="INTEGER" property="categoryid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="uploadtime" jdbcType="TIMESTAMP" property="uploadtime" />
+    <result column="uploadusername" jdbcType="VARCHAR" property="uploadusername" />
+    <result column="region_name" jdbcType="VARCHAR" property="regionName" />
+    <result column="city_name" jdbcType="VARCHAR" property="cityName" />
+    <result column="logic_cell" jdbcType="VARCHAR" property="logicCell" />
+    <result column="physics_cell" jdbcType="VARCHAR" property="physicsCell" />
+    <result column="tdl_plaincell_num" jdbcType="VARCHAR" property="tdlPlaincellNum" />
+    <result column="tdl_plaincell_num_old" jdbcType="VARCHAR" property="tdlPlaincellNumOld" />
+    <result column="enodeb_type" jdbcType="VARCHAR" property="enodebType" />
+    <result column="build_require_num" jdbcType="VARCHAR" property="buildRequireNum" />
+    <result column="covering_target" jdbcType="VARCHAR" property="coveringTarget" />
+    <result column="planning_longitude" jdbcType="DECIMAL" property="planningLongitude" />
+    <result column="planning_latitude" jdbcType="DECIMAL" property="planningLatitude" />
+    <result column="lte_build_property" jdbcType="VARCHAR" property="lteBuildProperty" />
+    <result column="common_addr_property" jdbcType="VARCHAR" property="commonAddrProperty" />
+    <result column="common_addr_gsm_cell" jdbcType="VARCHAR" property="commonAddrGsmCell" />
+    <result column="addr_area_type" jdbcType="VARCHAR" property="addrAreaType" />
+    <result column="benumber" jdbcType="VARCHAR" property="benumber" />
+    <result column="celladdrstate" jdbcType="VARCHAR" property="celladdrstate" />
+    <result column="areatype" jdbcType="VARCHAR" property="areatype" />
+    <result column="build_cell_classify" jdbcType="VARCHAR" property="buildCellClassify" />
+    <result column="tdlnum" jdbcType="VARCHAR" property="tdlnum" />
+    <result column="solution_batch" jdbcType="VARCHAR" property="solutionBatch" />
+    <result column="vendor_name" jdbcType="VARCHAR" property="vendorName" />
+    <result column="band" jdbcType="VARCHAR" property="band" />
+    <result column="lte_isfiberfar" jdbcType="VARCHAR" property="lteIsfiberfar" />
+    <result column="enodeb_configuration" jdbcType="VARCHAR" property="enodebConfiguration" />
+    <result column="cell_count" jdbcType="INTEGER" property="cellCount" />
+    <result column="carrier_count" jdbcType="INTEGER" property="carrierCount" />
+    <result column="bbu_remould_type" jdbcType="VARCHAR" property="bbuRemouldType" />
+    <result column="bbu_model" jdbcType="VARCHAR" property="bbuModel" />
+    <result column="bbu_count" jdbcType="INTEGER" property="bbuCount" />
+    <result column="bbu_install_type" jdbcType="VARCHAR" property="bbuInstallType" />
+    <result column="rru_remould_type" jdbcType="VARCHAR" property="rruRemouldType" />
+    <result column="rru_model" jdbcType="VARCHAR" property="rruModel" />
+    <result column="rru_count" jdbcType="INTEGER" property="rruCount" />
+    <result column="rru_channel_count" jdbcType="INTEGER" property="rruChannelCount" />
+    <result column="rru_cell" jdbcType="VARCHAR" property="rruCell" />
+    <result column="rru_supply_type" jdbcType="VARCHAR" property="rruSupplyType" />
+    <result column="reconnoiter_physics_cell" jdbcType="VARCHAR" property="reconnoiterPhysicsCell" />
+    <result column="prospect_longitude" jdbcType="DECIMAL" property="prospectLongitude" />
+    <result column="prospect_latitude" jdbcType="DECIMAL" property="prospectLatitude" />
+    <result column="reconnoiter_hanging" jdbcType="VARCHAR" property="reconnoiterHanging" />
+    <result column="planning_bearing" jdbcType="VARCHAR" property="planningBearing" />
+    <result column="optical_height" jdbcType="VARCHAR" property="opticalHeight" />
+    <result column="reconnoiter_isfiberfar" jdbcType="VARCHAR" property="reconnoiterIsfiberfar" />
+    <result column="masttype" jdbcType="VARCHAR" property="masttype" />
+    <result column="new_used1" jdbcType="VARCHAR" property="newUsed1" />
+    <result column="height" jdbcType="INTEGER" property="height" />
+    <result column="machineroom_type" jdbcType="VARCHAR" property="machineroomType" />
+    <result column="new_used2" jdbcType="VARCHAR" property="newUsed2" />
+    <result column="df_common_antenna" jdbcType="VARCHAR" property="dfCommonAntenna" />
+    <result column="antenna_model" jdbcType="VARCHAR" property="antennaModel" />
+    <result column="antenna_count" jdbcType="INTEGER" property="antennaCount" />
+    <result column="planning_change_msg" jdbcType="VARCHAR" property="planningChangeMsg" />
+    <result column="special_solution_added" jdbcType="VARCHAR" property="specialSolutionAdded" />
+    <result column="institute_design" jdbcType="VARCHAR" property="instituteDesign" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="isbackout" jdbcType="VARCHAR" property="isbackout" />
+    <result column="backout_reason_type" jdbcType="VARCHAR" property="backoutReasonType" />
+    <result column="backout_reason_msg" jdbcType="VARCHAR" property="backoutReasonMsg" />
+    <result column="plannin_gaudit_ispass" jdbcType="VARCHAR" property="planninGauditIspass" />
+    <result column="plannin_dismiss_reason_type" jdbcType="VARCHAR" property="planninDismissReasonType" />
+    <result column="plannin_gaudit_msg" jdbcType="VARCHAR" property="planninGauditMsg" />
+    <result column="plannindata_gaudit_ispass" jdbcType="VARCHAR" property="plannindataGauditIspass" />
+    <result column="plannindata_reason_type" jdbcType="VARCHAR" property="plannindataReasonType" />
+    <result column="plannindata_gaudit_msg" jdbcType="VARCHAR" property="plannindataGauditMsg" />
+    <result column="actualsurvey_covered_way" jdbcType="VARCHAR" property="actualsurveyCoveredWay" />
+    <result column="actualsurvey_logic_cell" jdbcType="VARCHAR" property="actualsurveyLogicCell" />
+    <result column="actualsurvey_physics_cell" jdbcType="VARCHAR" property="actualsurveyPhysicsCell" />
+    <result column="actualsurvey_longitude" jdbcType="VARCHAR" property="actualsurveyLongitude" />
+    <result column="actualsurvey_latitude" jdbcType="VARCHAR" property="actualsurveyLatitude" />
+    <result column="actualsurvey_hanging" jdbcType="VARCHAR" property="actualsurveyHanging" />
+    <result column="recent_station_spacing" jdbcType="INTEGER" property="recentStationSpacing" />
+    <result column="recent_station_cellname" jdbcType="VARCHAR" property="recentStationCellname" />
+    <result column="actualsurvey_band" jdbcType="VARCHAR" property="actualsurveyBand" />
+    <result column="actualsurvey_bearing" jdbcType="VARCHAR" property="actualsurveyBearing" />
+    <result column="actualsurvey_downtilt" jdbcType="VARCHAR" property="actualsurveyDowntilt" />
+    <result column="actualsurvey_count" jdbcType="INTEGER" property="actualsurveyCount" />
+    <result column="entrust_tt" jdbcType="VARCHAR" property="entrustTt" />
+    <result column="docking_ispass_tt" jdbcType="VARCHAR" property="dockingIspassTt" />
+    <result column="join_time_tt" jdbcType="TIMESTAMP" property="joinTimeTt" />
+    <result column="docking_dismiss_reason_type" jdbcType="VARCHAR" property="dockingDismissReasonType" />
+    <result column="docking_dismiss_msg" jdbcType="VARCHAR" property="dockingDismissMsg" />
+    <result column="celldistance_migration" jdbcType="VARCHAR" property="celldistanceMigration" />
+    <result column="isexist_change" jdbcType="VARCHAR" property="isexistChange" />
+    <result column="changed_reason_type" jdbcType="VARCHAR" property="changedReasonType" />
+    <result column="changed_reason_msg" jdbcType="VARCHAR" property="changedReasonMsg" />
+    <result column="changed_time" jdbcType="TIMESTAMP" property="changedTime" />
+    <result column="survey_gaudit_ispass" jdbcType="VARCHAR" property="surveyGauditIspass" />
+    <result column="survey_dismiss_reason_type" jdbcType="VARCHAR" property="surveyDismissReasonType" />
+    <result column="survey_gaudit_msg" jdbcType="VARCHAR" property="surveyGauditMsg" />
+    <result column="can_submit_triage" jdbcType="VARCHAR" property="canSubmitTriage" />
+    <result column="triage_batch" jdbcType="VARCHAR" property="triageBatch" />
+    <result column="triage_count" jdbcType="INTEGER" property="triageCount" />
+    <result column="triage_logic_cell" jdbcType="VARCHAR" property="triageLogicCell" />
+    <result column="triage_physics_cell" jdbcType="VARCHAR" property="triagePhysicsCell" />
+    <result column="triage_longitude" jdbcType="VARCHAR" property="triageLongitude" />
+    <result column="triage_latitude" jdbcType="VARCHAR" property="triageLatitude" />
+    <result column="triage_band" jdbcType="VARCHAR" property="triageBand" />
+    <result column="triage_hanging" jdbcType="VARCHAR" property="triageHanging" />
+    <result column="triage_bearing" jdbcType="VARCHAR" property="triageBearing" />
+    <result column="triage_machine_downtilt" jdbcType="VARCHAR" property="triageMachineDowntilt" />
+    <result column="triage_prefabelectron_downtilt" jdbcType="VARCHAR" property="triagePrefabelectronDowntilt" />
+    <result column="triage_electron_downtilt" jdbcType="VARCHAR" property="triageElectronDowntilt" />
+    <result column="triage_celldistance_migration" jdbcType="INTEGER" property="triageCelldistanceMigration" />
+    <result column="triage_recent_station_spacing" jdbcType="INTEGER" property="triageRecentStationSpacing" />
+    <result column="triage_station_cellname" jdbcType="VARCHAR" property="triageStationCellname" />
+    <result column="triage_cell_resource_type" jdbcType="VARCHAR" property="triageCellResourceType" />
+    <result column="triage_colocation_type" jdbcType="VARCHAR" property="triageColocationType" />
+    <result column="triage_fill_ispass" jdbcType="VARCHAR" property="triageFillIspass" />
+    <result column="triage_dismiss_reason_type" jdbcType="VARCHAR" property="triageDismissReasonType" />
+    <result column="triage_fill_msg" jdbcType="VARCHAR" property="triageFillMsg" />
+    <result column="province_gaudit_ispass" jdbcType="VARCHAR" property="provinceGauditIspass" />
+    <result column="province_dismiss_reason_type" jdbcType="VARCHAR" property="provinceDismissReasonType" />
+    <result column="province_gaudit_msg" jdbcType="VARCHAR" property="provinceGauditMsg" />
+    <result column="pm_gaudit_ispass" jdbcType="VARCHAR" property="pmGauditIspass" />
+    <result column="pm_fill_msg" jdbcType="VARCHAR" property="pmFillMsg" />
+    <result column="can_submit_regaudit" jdbcType="VARCHAR" property="canSubmitRegaudit" />
+    <result column="submit_regaudit_reason_type" jdbcType="VARCHAR" property="submitRegauditReasonType" />
+    <result column="submit_regaudit_msg" jdbcType="VARCHAR" property="submitRegauditMsg" />
+    <result column="regaudit_request_ispass" jdbcType="VARCHAR" property="regauditRequestIspass" />
+    <result column="audit_opinion_type" jdbcType="VARCHAR" property="auditOpinionType" />
+    <result column="audit_opinion_msg" jdbcType="VARCHAR" property="auditOpinionMsg" />
+    <result column="demand_source" jdbcType="VARCHAR" property="demandSource" />
+    <result column="demand_reference" jdbcType="VARCHAR" property="demandReference" />
+    <result column="demand_priority" jdbcType="VARCHAR" property="demandPriority" />
+    <result column="demand_longitude" jdbcType="DECIMAL" property="demandLongitude" />
+    <result column="demand_latitude" jdbcType="DECIMAL" property="demandLatitude" />
+    <result column="working_longitude" jdbcType="VARCHAR" property="workingLongitude" />
+    <result column="working_latitude" jdbcType="VARCHAR" property="workingLatitude" />
+    <result column="working_hanging" jdbcType="VARCHAR" property="workingHanging" />
+    <result column="working_count" jdbcType="INTEGER" property="workingCount" />
+    <result column="docking_ispass_reason_type" jdbcType="VARCHAR" property="dockingIspassReasonType" />
+    <result column="docking_ispass_msg" jdbcType="VARCHAR" property="dockingIspassMsg" />
+    <result column="deliverycheck_pass_time" jdbcType="TIMESTAMP" property="deliverycheckPassTime" />
+    <result column="delcheck_dismiss_reason_type" jdbcType="VARCHAR" property="delcheckDismissReasonType" />
+    <result column="delcheck_dismiss_msg" jdbcType="VARCHAR" property="delcheckDismissMsg" />
+    <result column="issitebuilder" jdbcType="INTEGER" property="issitebuilder" />
+    <result column="handover_time" jdbcType="TIMESTAMP" property="handoverTime" />
+    <result column="planning_update_date" jdbcType="TIMESTAMP" property="planningUpdateDate" />
+    <result column="audityg_update_date" jdbcType="TIMESTAMP" property="auditygUpdateDate" />
+    <result column="complete_update_date" jdbcType="TIMESTAMP" property="completeUpdateDate" />
+    <result column="planningaudit_update_date" jdbcType="TIMESTAMP" property="planningauditUpdateDate" />
+    <result column="entrust_update_date" jdbcType="TIMESTAMP" property="entrustUpdateDate" />
+    <result column="seaffirm_update_date" jdbcType="TIMESTAMP" property="seaffirmUpdateDate" />
+    <result column="actualinfo_update_date" jdbcType="TIMESTAMP" property="actualinfoUpdateDate" />
+    <result column="auditsurvey_update_date" jdbcType="TIMESTAMP" property="auditsurveyUpdateDate" />
+    <result column="triage_update_date" jdbcType="TIMESTAMP" property="triageUpdateDate" />
+    <result column="sectriage_update_date" jdbcType="TIMESTAMP" property="sectriageUpdateDate" />
+    <result column="hanging_migration" jdbcType="VARCHAR" property="hangingMigration" />
+    <result column="is_reform" jdbcType="VARCHAR" property="isReform" />
+    <result column="reform_msg" jdbcType="VARCHAR" property="reformMsg" />
+    <result column="reform_from" jdbcType="VARCHAR" property="reformFrom" />
+    <result column="reform_type" jdbcType="VARCHAR" property="reformType" />
+    <result column="reform_cell" jdbcType="VARCHAR" property="reformCell" />
+    <result column="reform_longtitude" jdbcType="VARCHAR" property="reformLongtitude" />
+    <result column="reform_latitude" jdbcType="VARCHAR" property="reformLatitude" />
+    <result column="reform_band" jdbcType="VARCHAR" property="reformBand" />
+    <result column="reform_hanging" jdbcType="VARCHAR" property="reformHanging" />
+    <result column="reform_gaudit_ispass" jdbcType="VARCHAR" property="reformGauditIspass" />
+    <result column="reform_gaudit_msg" jdbcType="VARCHAR" property="reformGauditMsg" />
+    <result column="reform_complete_time" jdbcType="VARCHAR" property="reformCompleteTime" />
+    <result column="is_expand" jdbcType="VARCHAR" property="isExpand" />
+    <result column="current_band" jdbcType="VARCHAR" property="currentBand" />
+    <result column="addorminus_band" jdbcType="VARCHAR" property="addorminusBand" />
+    <result column="expand_require_from" jdbcType="VARCHAR" property="expandRequireFrom" />
+    <result column="expand_require_time" jdbcType="VARCHAR" property="expandRequireTime" />
+    <result column="expand_gaudit_ispass" jdbcType="VARCHAR" property="expandGauditIspass" />
+    <result column="expand_gaudit_msg" jdbcType="VARCHAR" property="expandGauditMsg" />
+    <result column="expand_triage_time" jdbcType="VARCHAR" property="expandTriageTime" />
+    <result column="expand_force_time" jdbcType="VARCHAR" property="expandForceTime" />
+    <result column="build_schedule" jdbcType="VARCHAR" property="buildSchedule" />
+    <result column="is_submit_build_req" jdbcType="VARCHAR" property="isSubmitBuildReq" />
+    <result column="buildreq_update_date" jdbcType="TIMESTAMP" property="buildreqUpdateDate" />
+    <result column="swy_ky_audit_ispass" jdbcType="VARCHAR" property="swyKyAuditIspass" />
+    <result column="swy_ky_audit_reason_type" jdbcType="VARCHAR" property="swyKyAuditReasonType" />
+    <result column="swy_ky_audit_msg" jdbcType="VARCHAR" property="swyKyAuditMsg" />
+    <result column="kyaudit_update_date" jdbcType="TIMESTAMP" property="kyauditUpdateDate" />
+    <result column="param_enodeb_id" jdbcType="VARCHAR" property="paramEnodebId" />
+    <result column="param_cell_name" jdbcType="VARCHAR" property="paramCellName" />
+    <result column="param_cell_id" jdbcType="VARCHAR" property="paramCellId" />
+    <result column="param_pci" jdbcType="VARCHAR" property="paramPci" />
+    <result column="param_tac" jdbcType="VARCHAR" property="paramTac" />
+    <result column="paramconfig_update_date" jdbcType="TIMESTAMP" property="paramconfigUpdateDate" />
+    <result column="cell_status" jdbcType="VARCHAR" property="cellStatus" />
+    <result column="resource_status" jdbcType="VARCHAR" property="resourceStatus" />
+    <result column="resource_time" jdbcType="TIMESTAMP" property="resourceTime" />
+    <result column="have_change_report" jdbcType="VARCHAR" property="haveChangeReport" />
+    <result column="is_beautify_antenna" jdbcType="VARCHAR" property="isBeautifyAntenna" />
+    <result column="beautify_antenna_type" jdbcType="VARCHAR" property="beautifyAntennaType" />
+    <result column="is_eledown_antenna" jdbcType="VARCHAR" property="isEledownAntenna" />
+    <result column="eledown_antenna_type" jdbcType="VARCHAR" property="eledownAntennaType" />
+    <result column="planning_sector_count" jdbcType="INTEGER" property="planningSectorCount" />
+    <result column="actualsurvey_sector_count" jdbcType="INTEGER" property="actualsurveySectorCount" />
+    <result column="actualsurvey_cell_count" jdbcType="INTEGER" property="actualsurveyCellCount" />
+    <result column="is_configparam" jdbcType="VARCHAR" property="isConfigparam" />
+    <result column="param_is_auto" jdbcType="INTEGER" property="paramIsAuto" />
+    <result column="system_standard" jdbcType="VARCHAR" property="systemStandard" />
+    <result column="opensite_type" jdbcType="VARCHAR" property="opensiteType" />
+    <result column="is_support_nbiot" jdbcType="VARCHAR" property="isSupportNbiot" />
+    <result column="is_refresh_removal" jdbcType="INTEGER" property="isRefreshRemoval" />
+    <result column="is_interface_return" jdbcType="INTEGER" property="isInterfaceReturn" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, workid, categoryid, status, uploadtime, uploadusername, region_name, city_name, 
+    logic_cell, physics_cell, tdl_plaincell_num, tdl_plaincell_num_old, enodeb_type, 
+    build_require_num, covering_target, planning_longitude, planning_latitude, lte_build_property, 
+    common_addr_property, common_addr_gsm_cell, addr_area_type, benumber, celladdrstate, 
+    areatype, build_cell_classify, tdlnum, solution_batch, vendor_name, band, lte_isfiberfar, 
+    enodeb_configuration, cell_count, carrier_count, bbu_remould_type, bbu_model, bbu_count, 
+    bbu_install_type, rru_remould_type, rru_model, rru_count, rru_channel_count, rru_cell, 
+    rru_supply_type, reconnoiter_physics_cell, prospect_longitude, prospect_latitude, 
+    reconnoiter_hanging, planning_bearing, optical_height, reconnoiter_isfiberfar, masttype, 
+    new_used1, height, machineroom_type, new_used2, df_common_antenna, antenna_model, 
+    antenna_count, planning_change_msg, special_solution_added, institute_design, remark, 
+    isbackout, backout_reason_type, backout_reason_msg, plannin_gaudit_ispass, plannin_dismiss_reason_type, 
+    plannin_gaudit_msg, plannindata_gaudit_ispass, plannindata_reason_type, plannindata_gaudit_msg, 
+    actualsurvey_covered_way, actualsurvey_logic_cell, actualsurvey_physics_cell, actualsurvey_longitude, 
+    actualsurvey_latitude, actualsurvey_hanging, recent_station_spacing, recent_station_cellname, 
+    actualsurvey_band, actualsurvey_bearing, actualsurvey_downtilt, actualsurvey_count, 
+    entrust_tt, docking_ispass_tt, join_time_tt, docking_dismiss_reason_type, docking_dismiss_msg, 
+    celldistance_migration, isexist_change, changed_reason_type, changed_reason_msg, 
+    changed_time, survey_gaudit_ispass, survey_dismiss_reason_type, survey_gaudit_msg, 
+    can_submit_triage, triage_batch, triage_count, triage_logic_cell, triage_physics_cell, 
+    triage_longitude, triage_latitude, triage_band, triage_hanging, triage_bearing, triage_machine_downtilt, 
+    triage_prefabelectron_downtilt, triage_electron_downtilt, triage_celldistance_migration, 
+    triage_recent_station_spacing, triage_station_cellname, triage_cell_resource_type, 
+    triage_colocation_type, triage_fill_ispass, triage_dismiss_reason_type, triage_fill_msg, 
+    province_gaudit_ispass, province_dismiss_reason_type, province_gaudit_msg, pm_gaudit_ispass, 
+    pm_fill_msg, can_submit_regaudit, submit_regaudit_reason_type, submit_regaudit_msg, 
+    regaudit_request_ispass, audit_opinion_type, audit_opinion_msg, demand_source, demand_reference, 
+    demand_priority, demand_longitude, demand_latitude, working_longitude, working_latitude, 
+    working_hanging, working_count, docking_ispass_reason_type, docking_ispass_msg, deliverycheck_pass_time, 
+    delcheck_dismiss_reason_type, delcheck_dismiss_msg, issitebuilder, handover_time, 
+    planning_update_date, audityg_update_date, complete_update_date, planningaudit_update_date, 
+    entrust_update_date, seaffirm_update_date, actualinfo_update_date, auditsurvey_update_date, 
+    triage_update_date, sectriage_update_date, hanging_migration, is_reform, reform_msg, 
+    reform_from, reform_type, reform_cell, reform_longtitude, reform_latitude, reform_band, 
+    reform_hanging, reform_gaudit_ispass, reform_gaudit_msg, reform_complete_time, is_expand, 
+    current_band, addorminus_band, expand_require_from, expand_require_time, expand_gaudit_ispass, 
+    expand_gaudit_msg, expand_triage_time, expand_force_time, build_schedule, is_submit_build_req, 
+    buildreq_update_date, swy_ky_audit_ispass, swy_ky_audit_reason_type, swy_ky_audit_msg, 
+    kyaudit_update_date, param_enodeb_id, param_cell_name, param_cell_id, param_pci, 
+    param_tac, paramconfig_update_date, cell_status, resource_status, resource_time, 
+    have_change_report, is_beautify_antenna, beautify_antenna_type, is_eledown_antenna, 
+    eledown_antenna_type, planning_sector_count, actualsurvey_sector_count, actualsurvey_cell_count, 
+    is_configparam, param_is_auto, system_standard, opensite_type, is_support_nbiot, 
+    is_refresh_removal, is_interface_return
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from HB_PLANNINGDETAIL_V2
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from HB_PLANNINGDETAIL_V2
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="centralized.plan.model.PlanningDetailEntity">
+    insert into HB_PLANNINGDETAIL_V2 (id, workid, categoryid, 
+      status, uploadtime, uploadusername, 
+      region_name, city_name, logic_cell, 
+      physics_cell, tdl_plaincell_num, tdl_plaincell_num_old, 
+      enodeb_type, build_require_num, covering_target, 
+      planning_longitude, planning_latitude, lte_build_property, 
+      common_addr_property, common_addr_gsm_cell, 
+      addr_area_type, benumber, celladdrstate, 
+      areatype, build_cell_classify, tdlnum, 
+      solution_batch, vendor_name, band, 
+      lte_isfiberfar, enodeb_configuration, cell_count, 
+      carrier_count, bbu_remould_type, bbu_model, 
+      bbu_count, bbu_install_type, rru_remould_type, 
+      rru_model, rru_count, rru_channel_count, 
+      rru_cell, rru_supply_type, reconnoiter_physics_cell, 
+      prospect_longitude, prospect_latitude, reconnoiter_hanging, 
+      planning_bearing, optical_height, reconnoiter_isfiberfar, 
+      masttype, new_used1, height, 
+      machineroom_type, new_used2, df_common_antenna, 
+      antenna_model, antenna_count, planning_change_msg, 
+      special_solution_added, institute_design, 
+      remark, isbackout, backout_reason_type, 
+      backout_reason_msg, plannin_gaudit_ispass, 
+      plannin_dismiss_reason_type, plannin_gaudit_msg, 
+      plannindata_gaudit_ispass, plannindata_reason_type, 
+      plannindata_gaudit_msg, actualsurvey_covered_way, 
+      actualsurvey_logic_cell, actualsurvey_physics_cell, 
+      actualsurvey_longitude, actualsurvey_latitude, 
+      actualsurvey_hanging, recent_station_spacing, 
+      recent_station_cellname, actualsurvey_band, 
+      actualsurvey_bearing, actualsurvey_downtilt, 
+      actualsurvey_count, entrust_tt, docking_ispass_tt, 
+      join_time_tt, docking_dismiss_reason_type, 
+      docking_dismiss_msg, celldistance_migration, 
+      isexist_change, changed_reason_type, changed_reason_msg, 
+      changed_time, survey_gaudit_ispass, survey_dismiss_reason_type, 
+      survey_gaudit_msg, can_submit_triage, triage_batch, 
+      triage_count, triage_logic_cell, triage_physics_cell, 
+      triage_longitude, triage_latitude, triage_band, 
+      triage_hanging, triage_bearing, triage_machine_downtilt, 
+      triage_prefabelectron_downtilt, triage_electron_downtilt, 
+      triage_celldistance_migration, triage_recent_station_spacing, 
+      triage_station_cellname, triage_cell_resource_type, 
+      triage_colocation_type, triage_fill_ispass, 
+      triage_dismiss_reason_type, triage_fill_msg, 
+      province_gaudit_ispass, province_dismiss_reason_type, 
+      province_gaudit_msg, pm_gaudit_ispass, pm_fill_msg, 
+      can_submit_regaudit, submit_regaudit_reason_type, 
+      submit_regaudit_msg, regaudit_request_ispass, 
+      audit_opinion_type, audit_opinion_msg, demand_source, 
+      demand_reference, demand_priority, demand_longitude, 
+      demand_latitude, working_longitude, working_latitude, 
+      working_hanging, working_count, docking_ispass_reason_type, 
+      docking_ispass_msg, deliverycheck_pass_time, 
+      delcheck_dismiss_reason_type, delcheck_dismiss_msg, 
+      issitebuilder, handover_time, planning_update_date, 
+      audityg_update_date, complete_update_date, 
+      planningaudit_update_date, entrust_update_date, 
+      seaffirm_update_date, actualinfo_update_date, 
+      auditsurvey_update_date, triage_update_date, 
+      sectriage_update_date, hanging_migration, 
+      is_reform, reform_msg, reform_from, 
+      reform_type, reform_cell, reform_longtitude, 
+      reform_latitude, reform_band, reform_hanging, 
+      reform_gaudit_ispass, reform_gaudit_msg, reform_complete_time, 
+      is_expand, current_band, addorminus_band, 
+      expand_require_from, expand_require_time, expand_gaudit_ispass, 
+      expand_gaudit_msg, expand_triage_time, expand_force_time, 
+      build_schedule, is_submit_build_req, buildreq_update_date, 
+      swy_ky_audit_ispass, swy_ky_audit_reason_type, 
+      swy_ky_audit_msg, kyaudit_update_date, param_enodeb_id, 
+      param_cell_name, param_cell_id, param_pci, 
+      param_tac, paramconfig_update_date, cell_status, 
+      resource_status, resource_time, have_change_report, 
+      is_beautify_antenna, beautify_antenna_type, 
+      is_eledown_antenna, eledown_antenna_type, planning_sector_count, 
+      actualsurvey_sector_count, actualsurvey_cell_count, 
+      is_configparam, param_is_auto, system_standard, 
+      opensite_type, is_support_nbiot, is_refresh_removal, 
+      is_interface_return)
+    values (#{id,jdbcType=INTEGER}, #{workid,jdbcType=INTEGER}, #{categoryid,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{uploadtime,jdbcType=TIMESTAMP}, #{uploadusername,jdbcType=VARCHAR}, 
+      #{regionName,jdbcType=VARCHAR}, #{cityName,jdbcType=VARCHAR}, #{logicCell,jdbcType=VARCHAR}, 
+      #{physicsCell,jdbcType=VARCHAR}, #{tdlPlaincellNum,jdbcType=VARCHAR}, #{tdlPlaincellNumOld,jdbcType=VARCHAR}, 
+      #{enodebType,jdbcType=VARCHAR}, #{buildRequireNum,jdbcType=VARCHAR}, #{coveringTarget,jdbcType=VARCHAR}, 
+      #{planningLongitude,jdbcType=DECIMAL}, #{planningLatitude,jdbcType=DECIMAL}, #{lteBuildProperty,jdbcType=VARCHAR}, 
+      #{commonAddrProperty,jdbcType=VARCHAR}, #{commonAddrGsmCell,jdbcType=VARCHAR}, 
+      #{addrAreaType,jdbcType=VARCHAR}, #{benumber,jdbcType=VARCHAR}, #{celladdrstate,jdbcType=VARCHAR}, 
+      #{areatype,jdbcType=VARCHAR}, #{buildCellClassify,jdbcType=VARCHAR}, #{tdlnum,jdbcType=VARCHAR}, 
+      #{solutionBatch,jdbcType=VARCHAR}, #{vendorName,jdbcType=VARCHAR}, #{band,jdbcType=VARCHAR}, 
+      #{lteIsfiberfar,jdbcType=VARCHAR}, #{enodebConfiguration,jdbcType=VARCHAR}, #{cellCount,jdbcType=INTEGER}, 
+      #{carrierCount,jdbcType=INTEGER}, #{bbuRemouldType,jdbcType=VARCHAR}, #{bbuModel,jdbcType=VARCHAR}, 
+      #{bbuCount,jdbcType=INTEGER}, #{bbuInstallType,jdbcType=VARCHAR}, #{rruRemouldType,jdbcType=VARCHAR}, 
+      #{rruModel,jdbcType=VARCHAR}, #{rruCount,jdbcType=INTEGER}, #{rruChannelCount,jdbcType=INTEGER}, 
+      #{rruCell,jdbcType=VARCHAR}, #{rruSupplyType,jdbcType=VARCHAR}, #{reconnoiterPhysicsCell,jdbcType=VARCHAR}, 
+      #{prospectLongitude,jdbcType=DECIMAL}, #{prospectLatitude,jdbcType=DECIMAL}, #{reconnoiterHanging,jdbcType=VARCHAR}, 
+      #{planningBearing,jdbcType=VARCHAR}, #{opticalHeight,jdbcType=VARCHAR}, #{reconnoiterIsfiberfar,jdbcType=VARCHAR}, 
+      #{masttype,jdbcType=VARCHAR}, #{newUsed1,jdbcType=VARCHAR}, #{height,jdbcType=INTEGER}, 
+      #{machineroomType,jdbcType=VARCHAR}, #{newUsed2,jdbcType=VARCHAR}, #{dfCommonAntenna,jdbcType=VARCHAR}, 
+      #{antennaModel,jdbcType=VARCHAR}, #{antennaCount,jdbcType=INTEGER}, #{planningChangeMsg,jdbcType=VARCHAR}, 
+      #{specialSolutionAdded,jdbcType=VARCHAR}, #{instituteDesign,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{isbackout,jdbcType=VARCHAR}, #{backoutReasonType,jdbcType=VARCHAR}, 
+      #{backoutReasonMsg,jdbcType=VARCHAR}, #{planninGauditIspass,jdbcType=VARCHAR}, 
+      #{planninDismissReasonType,jdbcType=VARCHAR}, #{planninGauditMsg,jdbcType=VARCHAR}, 
+      #{plannindataGauditIspass,jdbcType=VARCHAR}, #{plannindataReasonType,jdbcType=VARCHAR}, 
+      #{plannindataGauditMsg,jdbcType=VARCHAR}, #{actualsurveyCoveredWay,jdbcType=VARCHAR}, 
+      #{actualsurveyLogicCell,jdbcType=VARCHAR}, #{actualsurveyPhysicsCell,jdbcType=VARCHAR}, 
+      #{actualsurveyLongitude,jdbcType=VARCHAR}, #{actualsurveyLatitude,jdbcType=VARCHAR}, 
+      #{actualsurveyHanging,jdbcType=VARCHAR}, #{recentStationSpacing,jdbcType=INTEGER}, 
+      #{recentStationCellname,jdbcType=VARCHAR}, #{actualsurveyBand,jdbcType=VARCHAR}, 
+      #{actualsurveyBearing,jdbcType=VARCHAR}, #{actualsurveyDowntilt,jdbcType=VARCHAR}, 
+      #{actualsurveyCount,jdbcType=INTEGER}, #{entrustTt,jdbcType=VARCHAR}, #{dockingIspassTt,jdbcType=VARCHAR}, 
+      #{joinTimeTt,jdbcType=TIMESTAMP}, #{dockingDismissReasonType,jdbcType=VARCHAR}, 
+      #{dockingDismissMsg,jdbcType=VARCHAR}, #{celldistanceMigration,jdbcType=VARCHAR}, 
+      #{isexistChange,jdbcType=VARCHAR}, #{changedReasonType,jdbcType=VARCHAR}, #{changedReasonMsg,jdbcType=VARCHAR}, 
+      #{changedTime,jdbcType=TIMESTAMP}, #{surveyGauditIspass,jdbcType=VARCHAR}, #{surveyDismissReasonType,jdbcType=VARCHAR}, 
+      #{surveyGauditMsg,jdbcType=VARCHAR}, #{canSubmitTriage,jdbcType=VARCHAR}, #{triageBatch,jdbcType=VARCHAR}, 
+      #{triageCount,jdbcType=INTEGER}, #{triageLogicCell,jdbcType=VARCHAR}, #{triagePhysicsCell,jdbcType=VARCHAR}, 
+      #{triageLongitude,jdbcType=VARCHAR}, #{triageLatitude,jdbcType=VARCHAR}, #{triageBand,jdbcType=VARCHAR}, 
+      #{triageHanging,jdbcType=VARCHAR}, #{triageBearing,jdbcType=VARCHAR}, #{triageMachineDowntilt,jdbcType=VARCHAR}, 
+      #{triagePrefabelectronDowntilt,jdbcType=VARCHAR}, #{triageElectronDowntilt,jdbcType=VARCHAR}, 
+      #{triageCelldistanceMigration,jdbcType=INTEGER}, #{triageRecentStationSpacing,jdbcType=INTEGER}, 
+      #{triageStationCellname,jdbcType=VARCHAR}, #{triageCellResourceType,jdbcType=VARCHAR}, 
+      #{triageColocationType,jdbcType=VARCHAR}, #{triageFillIspass,jdbcType=VARCHAR}, 
+      #{triageDismissReasonType,jdbcType=VARCHAR}, #{triageFillMsg,jdbcType=VARCHAR}, 
+      #{provinceGauditIspass,jdbcType=VARCHAR}, #{provinceDismissReasonType,jdbcType=VARCHAR}, 
+      #{provinceGauditMsg,jdbcType=VARCHAR}, #{pmGauditIspass,jdbcType=VARCHAR}, #{pmFillMsg,jdbcType=VARCHAR}, 
+      #{canSubmitRegaudit,jdbcType=VARCHAR}, #{submitRegauditReasonType,jdbcType=VARCHAR}, 
+      #{submitRegauditMsg,jdbcType=VARCHAR}, #{regauditRequestIspass,jdbcType=VARCHAR}, 
+      #{auditOpinionType,jdbcType=VARCHAR}, #{auditOpinionMsg,jdbcType=VARCHAR}, #{demandSource,jdbcType=VARCHAR}, 
+      #{demandReference,jdbcType=VARCHAR}, #{demandPriority,jdbcType=VARCHAR}, #{demandLongitude,jdbcType=DECIMAL}, 
+      #{demandLatitude,jdbcType=DECIMAL}, #{workingLongitude,jdbcType=VARCHAR}, #{workingLatitude,jdbcType=VARCHAR}, 
+      #{workingHanging,jdbcType=VARCHAR}, #{workingCount,jdbcType=INTEGER}, #{dockingIspassReasonType,jdbcType=VARCHAR}, 
+      #{dockingIspassMsg,jdbcType=VARCHAR}, #{deliverycheckPassTime,jdbcType=TIMESTAMP}, 
+      #{delcheckDismissReasonType,jdbcType=VARCHAR}, #{delcheckDismissMsg,jdbcType=VARCHAR}, 
+      #{issitebuilder,jdbcType=INTEGER}, #{handoverTime,jdbcType=TIMESTAMP}, #{planningUpdateDate,jdbcType=TIMESTAMP}, 
+      #{auditygUpdateDate,jdbcType=TIMESTAMP}, #{completeUpdateDate,jdbcType=TIMESTAMP}, 
+      #{planningauditUpdateDate,jdbcType=TIMESTAMP}, #{entrustUpdateDate,jdbcType=TIMESTAMP}, 
+      #{seaffirmUpdateDate,jdbcType=TIMESTAMP}, #{actualinfoUpdateDate,jdbcType=TIMESTAMP}, 
+      #{auditsurveyUpdateDate,jdbcType=TIMESTAMP}, #{triageUpdateDate,jdbcType=TIMESTAMP}, 
+      #{sectriageUpdateDate,jdbcType=TIMESTAMP}, #{hangingMigration,jdbcType=VARCHAR}, 
+      #{isReform,jdbcType=VARCHAR}, #{reformMsg,jdbcType=VARCHAR}, #{reformFrom,jdbcType=VARCHAR}, 
+      #{reformType,jdbcType=VARCHAR}, #{reformCell,jdbcType=VARCHAR}, #{reformLongtitude,jdbcType=VARCHAR}, 
+      #{reformLatitude,jdbcType=VARCHAR}, #{reformBand,jdbcType=VARCHAR}, #{reformHanging,jdbcType=VARCHAR}, 
+      #{reformGauditIspass,jdbcType=VARCHAR}, #{reformGauditMsg,jdbcType=VARCHAR}, #{reformCompleteTime,jdbcType=VARCHAR}, 
+      #{isExpand,jdbcType=VARCHAR}, #{currentBand,jdbcType=VARCHAR}, #{addorminusBand,jdbcType=VARCHAR}, 
+      #{expandRequireFrom,jdbcType=VARCHAR}, #{expandRequireTime,jdbcType=VARCHAR}, #{expandGauditIspass,jdbcType=VARCHAR}, 
+      #{expandGauditMsg,jdbcType=VARCHAR}, #{expandTriageTime,jdbcType=VARCHAR}, #{expandForceTime,jdbcType=VARCHAR}, 
+      #{buildSchedule,jdbcType=VARCHAR}, #{isSubmitBuildReq,jdbcType=VARCHAR}, #{buildreqUpdateDate,jdbcType=TIMESTAMP}, 
+      #{swyKyAuditIspass,jdbcType=VARCHAR}, #{swyKyAuditReasonType,jdbcType=VARCHAR}, 
+      #{swyKyAuditMsg,jdbcType=VARCHAR}, #{kyauditUpdateDate,jdbcType=TIMESTAMP}, #{paramEnodebId,jdbcType=VARCHAR}, 
+      #{paramCellName,jdbcType=VARCHAR}, #{paramCellId,jdbcType=VARCHAR}, #{paramPci,jdbcType=VARCHAR}, 
+      #{paramTac,jdbcType=VARCHAR}, #{paramconfigUpdateDate,jdbcType=TIMESTAMP}, #{cellStatus,jdbcType=VARCHAR}, 
+      #{resourceStatus,jdbcType=VARCHAR}, #{resourceTime,jdbcType=TIMESTAMP}, #{haveChangeReport,jdbcType=VARCHAR}, 
+      #{isBeautifyAntenna,jdbcType=VARCHAR}, #{beautifyAntennaType,jdbcType=VARCHAR}, 
+      #{isEledownAntenna,jdbcType=VARCHAR}, #{eledownAntennaType,jdbcType=VARCHAR}, #{planningSectorCount,jdbcType=INTEGER}, 
+      #{actualsurveySectorCount,jdbcType=INTEGER}, #{actualsurveyCellCount,jdbcType=INTEGER}, 
+      #{isConfigparam,jdbcType=VARCHAR}, #{paramIsAuto,jdbcType=INTEGER}, #{systemStandard,jdbcType=VARCHAR}, 
+      #{opensiteType,jdbcType=VARCHAR}, #{isSupportNbiot,jdbcType=VARCHAR}, #{isRefreshRemoval,jdbcType=INTEGER}, 
+      #{isInterfaceReturn,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="centralized.plan.model.PlanningDetailEntity">
+    insert into HB_PLANNINGDETAIL_V2
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="workid != null">
+        workid,
+      </if>
+      <if test="categoryid != null">
+        categoryid,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="uploadtime != null">
+        uploadtime,
+      </if>
+      <if test="uploadusername != null">
+        uploadusername,
+      </if>
+      <if test="regionName != null">
+        region_name,
+      </if>
+      <if test="cityName != null">
+        city_name,
+      </if>
+      <if test="logicCell != null">
+        logic_cell,
+      </if>
+      <if test="physicsCell != null">
+        physics_cell,
+      </if>
+      <if test="tdlPlaincellNum != null">
+        tdl_plaincell_num,
+      </if>
+      <if test="tdlPlaincellNumOld != null">
+        tdl_plaincell_num_old,
+      </if>
+      <if test="enodebType != null">
+        enodeb_type,
+      </if>
+      <if test="buildRequireNum != null">
+        build_require_num,
+      </if>
+      <if test="coveringTarget != null">
+        covering_target,
+      </if>
+      <if test="planningLongitude != null">
+        planning_longitude,
+      </if>
+      <if test="planningLatitude != null">
+        planning_latitude,
+      </if>
+      <if test="lteBuildProperty != null">
+        lte_build_property,
+      </if>
+      <if test="commonAddrProperty != null">
+        common_addr_property,
+      </if>
+      <if test="commonAddrGsmCell != null">
+        common_addr_gsm_cell,
+      </if>
+      <if test="addrAreaType != null">
+        addr_area_type,
+      </if>
+      <if test="benumber != null">
+        benumber,
+      </if>
+      <if test="celladdrstate != null">
+        celladdrstate,
+      </if>
+      <if test="areatype != null">
+        areatype,
+      </if>
+      <if test="buildCellClassify != null">
+        build_cell_classify,
+      </if>
+      <if test="tdlnum != null">
+        tdlnum,
+      </if>
+      <if test="solutionBatch != null">
+        solution_batch,
+      </if>
+      <if test="vendorName != null">
+        vendor_name,
+      </if>
+      <if test="band != null">
+        band,
+      </if>
+      <if test="lteIsfiberfar != null">
+        lte_isfiberfar,
+      </if>
+      <if test="enodebConfiguration != null">
+        enodeb_configuration,
+      </if>
+      <if test="cellCount != null">
+        cell_count,
+      </if>
+      <if test="carrierCount != null">
+        carrier_count,
+      </if>
+      <if test="bbuRemouldType != null">
+        bbu_remould_type,
+      </if>
+      <if test="bbuModel != null">
+        bbu_model,
+      </if>
+      <if test="bbuCount != null">
+        bbu_count,
+      </if>
+      <if test="bbuInstallType != null">
+        bbu_install_type,
+      </if>
+      <if test="rruRemouldType != null">
+        rru_remould_type,
+      </if>
+      <if test="rruModel != null">
+        rru_model,
+      </if>
+      <if test="rruCount != null">
+        rru_count,
+      </if>
+      <if test="rruChannelCount != null">
+        rru_channel_count,
+      </if>
+      <if test="rruCell != null">
+        rru_cell,
+      </if>
+      <if test="rruSupplyType != null">
+        rru_supply_type,
+      </if>
+      <if test="reconnoiterPhysicsCell != null">
+        reconnoiter_physics_cell,
+      </if>
+      <if test="prospectLongitude != null">
+        prospect_longitude,
+      </if>
+      <if test="prospectLatitude != null">
+        prospect_latitude,
+      </if>
+      <if test="reconnoiterHanging != null">
+        reconnoiter_hanging,
+      </if>
+      <if test="planningBearing != null">
+        planning_bearing,
+      </if>
+      <if test="opticalHeight != null">
+        optical_height,
+      </if>
+      <if test="reconnoiterIsfiberfar != null">
+        reconnoiter_isfiberfar,
+      </if>
+      <if test="masttype != null">
+        masttype,
+      </if>
+      <if test="newUsed1 != null">
+        new_used1,
+      </if>
+      <if test="height != null">
+        height,
+      </if>
+      <if test="machineroomType != null">
+        machineroom_type,
+      </if>
+      <if test="newUsed2 != null">
+        new_used2,
+      </if>
+      <if test="dfCommonAntenna != null">
+        df_common_antenna,
+      </if>
+      <if test="antennaModel != null">
+        antenna_model,
+      </if>
+      <if test="antennaCount != null">
+        antenna_count,
+      </if>
+      <if test="planningChangeMsg != null">
+        planning_change_msg,
+      </if>
+      <if test="specialSolutionAdded != null">
+        special_solution_added,
+      </if>
+      <if test="instituteDesign != null">
+        institute_design,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="isbackout != null">
+        isbackout,
+      </if>
+      <if test="backoutReasonType != null">
+        backout_reason_type,
+      </if>
+      <if test="backoutReasonMsg != null">
+        backout_reason_msg,
+      </if>
+      <if test="planninGauditIspass != null">
+        plannin_gaudit_ispass,
+      </if>
+      <if test="planninDismissReasonType != null">
+        plannin_dismiss_reason_type,
+      </if>
+      <if test="planninGauditMsg != null">
+        plannin_gaudit_msg,
+      </if>
+      <if test="plannindataGauditIspass != null">
+        plannindata_gaudit_ispass,
+      </if>
+      <if test="plannindataReasonType != null">
+        plannindata_reason_type,
+      </if>
+      <if test="plannindataGauditMsg != null">
+        plannindata_gaudit_msg,
+      </if>
+      <if test="actualsurveyCoveredWay != null">
+        actualsurvey_covered_way,
+      </if>
+      <if test="actualsurveyLogicCell != null">
+        actualsurvey_logic_cell,
+      </if>
+      <if test="actualsurveyPhysicsCell != null">
+        actualsurvey_physics_cell,
+      </if>
+      <if test="actualsurveyLongitude != null">
+        actualsurvey_longitude,
+      </if>
+      <if test="actualsurveyLatitude != null">
+        actualsurvey_latitude,
+      </if>
+      <if test="actualsurveyHanging != null">
+        actualsurvey_hanging,
+      </if>
+      <if test="recentStationSpacing != null">
+        recent_station_spacing,
+      </if>
+      <if test="recentStationCellname != null">
+        recent_station_cellname,
+      </if>
+      <if test="actualsurveyBand != null">
+        actualsurvey_band,
+      </if>
+      <if test="actualsurveyBearing != null">
+        actualsurvey_bearing,
+      </if>
+      <if test="actualsurveyDowntilt != null">
+        actualsurvey_downtilt,
+      </if>
+      <if test="actualsurveyCount != null">
+        actualsurvey_count,
+      </if>
+      <if test="entrustTt != null">
+        entrust_tt,
+      </if>
+      <if test="dockingIspassTt != null">
+        docking_ispass_tt,
+      </if>
+      <if test="joinTimeTt != null">
+        join_time_tt,
+      </if>
+      <if test="dockingDismissReasonType != null">
+        docking_dismiss_reason_type,
+      </if>
+      <if test="dockingDismissMsg != null">
+        docking_dismiss_msg,
+      </if>
+      <if test="celldistanceMigration != null">
+        celldistance_migration,
+      </if>
+      <if test="isexistChange != null">
+        isexist_change,
+      </if>
+      <if test="changedReasonType != null">
+        changed_reason_type,
+      </if>
+      <if test="changedReasonMsg != null">
+        changed_reason_msg,
+      </if>
+      <if test="changedTime != null">
+        changed_time,
+      </if>
+      <if test="surveyGauditIspass != null">
+        survey_gaudit_ispass,
+      </if>
+      <if test="surveyDismissReasonType != null">
+        survey_dismiss_reason_type,
+      </if>
+      <if test="surveyGauditMsg != null">
+        survey_gaudit_msg,
+      </if>
+      <if test="canSubmitTriage != null">
+        can_submit_triage,
+      </if>
+      <if test="triageBatch != null">
+        triage_batch,
+      </if>
+      <if test="triageCount != null">
+        triage_count,
+      </if>
+      <if test="triageLogicCell != null">
+        triage_logic_cell,
+      </if>
+      <if test="triagePhysicsCell != null">
+        triage_physics_cell,
+      </if>
+      <if test="triageLongitude != null">
+        triage_longitude,
+      </if>
+      <if test="triageLatitude != null">
+        triage_latitude,
+      </if>
+      <if test="triageBand != null">
+        triage_band,
+      </if>
+      <if test="triageHanging != null">
+        triage_hanging,
+      </if>
+      <if test="triageBearing != null">
+        triage_bearing,
+      </if>
+      <if test="triageMachineDowntilt != null">
+        triage_machine_downtilt,
+      </if>
+      <if test="triagePrefabelectronDowntilt != null">
+        triage_prefabelectron_downtilt,
+      </if>
+      <if test="triageElectronDowntilt != null">
+        triage_electron_downtilt,
+      </if>
+      <if test="triageCelldistanceMigration != null">
+        triage_celldistance_migration,
+      </if>
+      <if test="triageRecentStationSpacing != null">
+        triage_recent_station_spacing,
+      </if>
+      <if test="triageStationCellname != null">
+        triage_station_cellname,
+      </if>
+      <if test="triageCellResourceType != null">
+        triage_cell_resource_type,
+      </if>
+      <if test="triageColocationType != null">
+        triage_colocation_type,
+      </if>
+      <if test="triageFillIspass != null">
+        triage_fill_ispass,
+      </if>
+      <if test="triageDismissReasonType != null">
+        triage_dismiss_reason_type,
+      </if>
+      <if test="triageFillMsg != null">
+        triage_fill_msg,
+      </if>
+      <if test="provinceGauditIspass != null">
+        province_gaudit_ispass,
+      </if>
+      <if test="provinceDismissReasonType != null">
+        province_dismiss_reason_type,
+      </if>
+      <if test="provinceGauditMsg != null">
+        province_gaudit_msg,
+      </if>
+      <if test="pmGauditIspass != null">
+        pm_gaudit_ispass,
+      </if>
+      <if test="pmFillMsg != null">
+        pm_fill_msg,
+      </if>
+      <if test="canSubmitRegaudit != null">
+        can_submit_regaudit,
+      </if>
+      <if test="submitRegauditReasonType != null">
+        submit_regaudit_reason_type,
+      </if>
+      <if test="submitRegauditMsg != null">
+        submit_regaudit_msg,
+      </if>
+      <if test="regauditRequestIspass != null">
+        regaudit_request_ispass,
+      </if>
+      <if test="auditOpinionType != null">
+        audit_opinion_type,
+      </if>
+      <if test="auditOpinionMsg != null">
+        audit_opinion_msg,
+      </if>
+      <if test="demandSource != null">
+        demand_source,
+      </if>
+      <if test="demandReference != null">
+        demand_reference,
+      </if>
+      <if test="demandPriority != null">
+        demand_priority,
+      </if>
+      <if test="demandLongitude != null">
+        demand_longitude,
+      </if>
+      <if test="demandLatitude != null">
+        demand_latitude,
+      </if>
+      <if test="workingLongitude != null">
+        working_longitude,
+      </if>
+      <if test="workingLatitude != null">
+        working_latitude,
+      </if>
+      <if test="workingHanging != null">
+        working_hanging,
+      </if>
+      <if test="workingCount != null">
+        working_count,
+      </if>
+      <if test="dockingIspassReasonType != null">
+        docking_ispass_reason_type,
+      </if>
+      <if test="dockingIspassMsg != null">
+        docking_ispass_msg,
+      </if>
+      <if test="deliverycheckPassTime != null">
+        deliverycheck_pass_time,
+      </if>
+      <if test="delcheckDismissReasonType != null">
+        delcheck_dismiss_reason_type,
+      </if>
+      <if test="delcheckDismissMsg != null">
+        delcheck_dismiss_msg,
+      </if>
+      <if test="issitebuilder != null">
+        issitebuilder,
+      </if>
+      <if test="handoverTime != null">
+        handover_time,
+      </if>
+      <if test="planningUpdateDate != null">
+        planning_update_date,
+      </if>
+      <if test="auditygUpdateDate != null">
+        audityg_update_date,
+      </if>
+      <if test="completeUpdateDate != null">
+        complete_update_date,
+      </if>
+      <if test="planningauditUpdateDate != null">
+        planningaudit_update_date,
+      </if>
+      <if test="entrustUpdateDate != null">
+        entrust_update_date,
+      </if>
+      <if test="seaffirmUpdateDate != null">
+        seaffirm_update_date,
+      </if>
+      <if test="actualinfoUpdateDate != null">
+        actualinfo_update_date,
+      </if>
+      <if test="auditsurveyUpdateDate != null">
+        auditsurvey_update_date,
+      </if>
+      <if test="triageUpdateDate != null">
+        triage_update_date,
+      </if>
+      <if test="sectriageUpdateDate != null">
+        sectriage_update_date,
+      </if>
+      <if test="hangingMigration != null">
+        hanging_migration,
+      </if>
+      <if test="isReform != null">
+        is_reform,
+      </if>
+      <if test="reformMsg != null">
+        reform_msg,
+      </if>
+      <if test="reformFrom != null">
+        reform_from,
+      </if>
+      <if test="reformType != null">
+        reform_type,
+      </if>
+      <if test="reformCell != null">
+        reform_cell,
+      </if>
+      <if test="reformLongtitude != null">
+        reform_longtitude,
+      </if>
+      <if test="reformLatitude != null">
+        reform_latitude,
+      </if>
+      <if test="reformBand != null">
+        reform_band,
+      </if>
+      <if test="reformHanging != null">
+        reform_hanging,
+      </if>
+      <if test="reformGauditIspass != null">
+        reform_gaudit_ispass,
+      </if>
+      <if test="reformGauditMsg != null">
+        reform_gaudit_msg,
+      </if>
+      <if test="reformCompleteTime != null">
+        reform_complete_time,
+      </if>
+      <if test="isExpand != null">
+        is_expand,
+      </if>
+      <if test="currentBand != null">
+        current_band,
+      </if>
+      <if test="addorminusBand != null">
+        addorminus_band,
+      </if>
+      <if test="expandRequireFrom != null">
+        expand_require_from,
+      </if>
+      <if test="expandRequireTime != null">
+        expand_require_time,
+      </if>
+      <if test="expandGauditIspass != null">
+        expand_gaudit_ispass,
+      </if>
+      <if test="expandGauditMsg != null">
+        expand_gaudit_msg,
+      </if>
+      <if test="expandTriageTime != null">
+        expand_triage_time,
+      </if>
+      <if test="expandForceTime != null">
+        expand_force_time,
+      </if>
+      <if test="buildSchedule != null">
+        build_schedule,
+      </if>
+      <if test="isSubmitBuildReq != null">
+        is_submit_build_req,
+      </if>
+      <if test="buildreqUpdateDate != null">
+        buildreq_update_date,
+      </if>
+      <if test="swyKyAuditIspass != null">
+        swy_ky_audit_ispass,
+      </if>
+      <if test="swyKyAuditReasonType != null">
+        swy_ky_audit_reason_type,
+      </if>
+      <if test="swyKyAuditMsg != null">
+        swy_ky_audit_msg,
+      </if>
+      <if test="kyauditUpdateDate != null">
+        kyaudit_update_date,
+      </if>
+      <if test="paramEnodebId != null">
+        param_enodeb_id,
+      </if>
+      <if test="paramCellName != null">
+        param_cell_name,
+      </if>
+      <if test="paramCellId != null">
+        param_cell_id,
+      </if>
+      <if test="paramPci != null">
+        param_pci,
+      </if>
+      <if test="paramTac != null">
+        param_tac,
+      </if>
+      <if test="paramconfigUpdateDate != null">
+        paramconfig_update_date,
+      </if>
+      <if test="cellStatus != null">
+        cell_status,
+      </if>
+      <if test="resourceStatus != null">
+        resource_status,
+      </if>
+      <if test="resourceTime != null">
+        resource_time,
+      </if>
+      <if test="haveChangeReport != null">
+        have_change_report,
+      </if>
+      <if test="isBeautifyAntenna != null">
+        is_beautify_antenna,
+      </if>
+      <if test="beautifyAntennaType != null">
+        beautify_antenna_type,
+      </if>
+      <if test="isEledownAntenna != null">
+        is_eledown_antenna,
+      </if>
+      <if test="eledownAntennaType != null">
+        eledown_antenna_type,
+      </if>
+      <if test="planningSectorCount != null">
+        planning_sector_count,
+      </if>
+      <if test="actualsurveySectorCount != null">
+        actualsurvey_sector_count,
+      </if>
+      <if test="actualsurveyCellCount != null">
+        actualsurvey_cell_count,
+      </if>
+      <if test="isConfigparam != null">
+        is_configparam,
+      </if>
+      <if test="paramIsAuto != null">
+        param_is_auto,
+      </if>
+      <if test="systemStandard != null">
+        system_standard,
+      </if>
+      <if test="opensiteType != null">
+        opensite_type,
+      </if>
+      <if test="isSupportNbiot != null">
+        is_support_nbiot,
+      </if>
+      <if test="isRefreshRemoval != null">
+        is_refresh_removal,
+      </if>
+      <if test="isInterfaceReturn != null">
+        is_interface_return,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="workid != null">
+        #{workid,jdbcType=INTEGER},
+      </if>
+      <if test="categoryid != null">
+        #{categoryid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="uploadtime != null">
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uploadusername != null">
+        #{uploadusername,jdbcType=VARCHAR},
+      </if>
+      <if test="regionName != null">
+        #{regionName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null">
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="logicCell != null">
+        #{logicCell,jdbcType=VARCHAR},
+      </if>
+      <if test="physicsCell != null">
+        #{physicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="tdlPlaincellNum != null">
+        #{tdlPlaincellNum,jdbcType=VARCHAR},
+      </if>
+      <if test="tdlPlaincellNumOld != null">
+        #{tdlPlaincellNumOld,jdbcType=VARCHAR},
+      </if>
+      <if test="enodebType != null">
+        #{enodebType,jdbcType=VARCHAR},
+      </if>
+      <if test="buildRequireNum != null">
+        #{buildRequireNum,jdbcType=VARCHAR},
+      </if>
+      <if test="coveringTarget != null">
+        #{coveringTarget,jdbcType=VARCHAR},
+      </if>
+      <if test="planningLongitude != null">
+        #{planningLongitude,jdbcType=DECIMAL},
+      </if>
+      <if test="planningLatitude != null">
+        #{planningLatitude,jdbcType=DECIMAL},
+      </if>
+      <if test="lteBuildProperty != null">
+        #{lteBuildProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="commonAddrProperty != null">
+        #{commonAddrProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="commonAddrGsmCell != null">
+        #{commonAddrGsmCell,jdbcType=VARCHAR},
+      </if>
+      <if test="addrAreaType != null">
+        #{addrAreaType,jdbcType=VARCHAR},
+      </if>
+      <if test="benumber != null">
+        #{benumber,jdbcType=VARCHAR},
+      </if>
+      <if test="celladdrstate != null">
+        #{celladdrstate,jdbcType=VARCHAR},
+      </if>
+      <if test="areatype != null">
+        #{areatype,jdbcType=VARCHAR},
+      </if>
+      <if test="buildCellClassify != null">
+        #{buildCellClassify,jdbcType=VARCHAR},
+      </if>
+      <if test="tdlnum != null">
+        #{tdlnum,jdbcType=VARCHAR},
+      </if>
+      <if test="solutionBatch != null">
+        #{solutionBatch,jdbcType=VARCHAR},
+      </if>
+      <if test="vendorName != null">
+        #{vendorName,jdbcType=VARCHAR},
+      </if>
+      <if test="band != null">
+        #{band,jdbcType=VARCHAR},
+      </if>
+      <if test="lteIsfiberfar != null">
+        #{lteIsfiberfar,jdbcType=VARCHAR},
+      </if>
+      <if test="enodebConfiguration != null">
+        #{enodebConfiguration,jdbcType=VARCHAR},
+      </if>
+      <if test="cellCount != null">
+        #{cellCount,jdbcType=INTEGER},
+      </if>
+      <if test="carrierCount != null">
+        #{carrierCount,jdbcType=INTEGER},
+      </if>
+      <if test="bbuRemouldType != null">
+        #{bbuRemouldType,jdbcType=VARCHAR},
+      </if>
+      <if test="bbuModel != null">
+        #{bbuModel,jdbcType=VARCHAR},
+      </if>
+      <if test="bbuCount != null">
+        #{bbuCount,jdbcType=INTEGER},
+      </if>
+      <if test="bbuInstallType != null">
+        #{bbuInstallType,jdbcType=VARCHAR},
+      </if>
+      <if test="rruRemouldType != null">
+        #{rruRemouldType,jdbcType=VARCHAR},
+      </if>
+      <if test="rruModel != null">
+        #{rruModel,jdbcType=VARCHAR},
+      </if>
+      <if test="rruCount != null">
+        #{rruCount,jdbcType=INTEGER},
+      </if>
+      <if test="rruChannelCount != null">
+        #{rruChannelCount,jdbcType=INTEGER},
+      </if>
+      <if test="rruCell != null">
+        #{rruCell,jdbcType=VARCHAR},
+      </if>
+      <if test="rruSupplyType != null">
+        #{rruSupplyType,jdbcType=VARCHAR},
+      </if>
+      <if test="reconnoiterPhysicsCell != null">
+        #{reconnoiterPhysicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="prospectLongitude != null">
+        #{prospectLongitude,jdbcType=DECIMAL},
+      </if>
+      <if test="prospectLatitude != null">
+        #{prospectLatitude,jdbcType=DECIMAL},
+      </if>
+      <if test="reconnoiterHanging != null">
+        #{reconnoiterHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="planningBearing != null">
+        #{planningBearing,jdbcType=VARCHAR},
+      </if>
+      <if test="opticalHeight != null">
+        #{opticalHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="reconnoiterIsfiberfar != null">
+        #{reconnoiterIsfiberfar,jdbcType=VARCHAR},
+      </if>
+      <if test="masttype != null">
+        #{masttype,jdbcType=VARCHAR},
+      </if>
+      <if test="newUsed1 != null">
+        #{newUsed1,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null">
+        #{height,jdbcType=INTEGER},
+      </if>
+      <if test="machineroomType != null">
+        #{machineroomType,jdbcType=VARCHAR},
+      </if>
+      <if test="newUsed2 != null">
+        #{newUsed2,jdbcType=VARCHAR},
+      </if>
+      <if test="dfCommonAntenna != null">
+        #{dfCommonAntenna,jdbcType=VARCHAR},
+      </if>
+      <if test="antennaModel != null">
+        #{antennaModel,jdbcType=VARCHAR},
+      </if>
+      <if test="antennaCount != null">
+        #{antennaCount,jdbcType=INTEGER},
+      </if>
+      <if test="planningChangeMsg != null">
+        #{planningChangeMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="specialSolutionAdded != null">
+        #{specialSolutionAdded,jdbcType=VARCHAR},
+      </if>
+      <if test="instituteDesign != null">
+        #{instituteDesign,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isbackout != null">
+        #{isbackout,jdbcType=VARCHAR},
+      </if>
+      <if test="backoutReasonType != null">
+        #{backoutReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="backoutReasonMsg != null">
+        #{backoutReasonMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="planninGauditIspass != null">
+        #{planninGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="planninDismissReasonType != null">
+        #{planninDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="planninGauditMsg != null">
+        #{planninGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="plannindataGauditIspass != null">
+        #{plannindataGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="plannindataReasonType != null">
+        #{plannindataReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="plannindataGauditMsg != null">
+        #{plannindataGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyCoveredWay != null">
+        #{actualsurveyCoveredWay,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyLogicCell != null">
+        #{actualsurveyLogicCell,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyPhysicsCell != null">
+        #{actualsurveyPhysicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyLongitude != null">
+        #{actualsurveyLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyLatitude != null">
+        #{actualsurveyLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyHanging != null">
+        #{actualsurveyHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="recentStationSpacing != null">
+        #{recentStationSpacing,jdbcType=INTEGER},
+      </if>
+      <if test="recentStationCellname != null">
+        #{recentStationCellname,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyBand != null">
+        #{actualsurveyBand,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyBearing != null">
+        #{actualsurveyBearing,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyDowntilt != null">
+        #{actualsurveyDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyCount != null">
+        #{actualsurveyCount,jdbcType=INTEGER},
+      </if>
+      <if test="entrustTt != null">
+        #{entrustTt,jdbcType=VARCHAR},
+      </if>
+      <if test="dockingIspassTt != null">
+        #{dockingIspassTt,jdbcType=VARCHAR},
+      </if>
+      <if test="joinTimeTt != null">
+        #{joinTimeTt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dockingDismissReasonType != null">
+        #{dockingDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="dockingDismissMsg != null">
+        #{dockingDismissMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="celldistanceMigration != null">
+        #{celldistanceMigration,jdbcType=VARCHAR},
+      </if>
+      <if test="isexistChange != null">
+        #{isexistChange,jdbcType=VARCHAR},
+      </if>
+      <if test="changedReasonType != null">
+        #{changedReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="changedReasonMsg != null">
+        #{changedReasonMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="changedTime != null">
+        #{changedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="surveyGauditIspass != null">
+        #{surveyGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="surveyDismissReasonType != null">
+        #{surveyDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="surveyGauditMsg != null">
+        #{surveyGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="canSubmitTriage != null">
+        #{canSubmitTriage,jdbcType=VARCHAR},
+      </if>
+      <if test="triageBatch != null">
+        #{triageBatch,jdbcType=VARCHAR},
+      </if>
+      <if test="triageCount != null">
+        #{triageCount,jdbcType=INTEGER},
+      </if>
+      <if test="triageLogicCell != null">
+        #{triageLogicCell,jdbcType=VARCHAR},
+      </if>
+      <if test="triagePhysicsCell != null">
+        #{triagePhysicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="triageLongitude != null">
+        #{triageLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="triageLatitude != null">
+        #{triageLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="triageBand != null">
+        #{triageBand,jdbcType=VARCHAR},
+      </if>
+      <if test="triageHanging != null">
+        #{triageHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="triageBearing != null">
+        #{triageBearing,jdbcType=VARCHAR},
+      </if>
+      <if test="triageMachineDowntilt != null">
+        #{triageMachineDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="triagePrefabelectronDowntilt != null">
+        #{triagePrefabelectronDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="triageElectronDowntilt != null">
+        #{triageElectronDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="triageCelldistanceMigration != null">
+        #{triageCelldistanceMigration,jdbcType=INTEGER},
+      </if>
+      <if test="triageRecentStationSpacing != null">
+        #{triageRecentStationSpacing,jdbcType=INTEGER},
+      </if>
+      <if test="triageStationCellname != null">
+        #{triageStationCellname,jdbcType=VARCHAR},
+      </if>
+      <if test="triageCellResourceType != null">
+        #{triageCellResourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="triageColocationType != null">
+        #{triageColocationType,jdbcType=VARCHAR},
+      </if>
+      <if test="triageFillIspass != null">
+        #{triageFillIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="triageDismissReasonType != null">
+        #{triageDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="triageFillMsg != null">
+        #{triageFillMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceGauditIspass != null">
+        #{provinceGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceDismissReasonType != null">
+        #{provinceDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceGauditMsg != null">
+        #{provinceGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="pmGauditIspass != null">
+        #{pmGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="pmFillMsg != null">
+        #{pmFillMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="canSubmitRegaudit != null">
+        #{canSubmitRegaudit,jdbcType=VARCHAR},
+      </if>
+      <if test="submitRegauditReasonType != null">
+        #{submitRegauditReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="submitRegauditMsg != null">
+        #{submitRegauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="regauditRequestIspass != null">
+        #{regauditRequestIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="auditOpinionType != null">
+        #{auditOpinionType,jdbcType=VARCHAR},
+      </if>
+      <if test="auditOpinionMsg != null">
+        #{auditOpinionMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="demandSource != null">
+        #{demandSource,jdbcType=VARCHAR},
+      </if>
+      <if test="demandReference != null">
+        #{demandReference,jdbcType=VARCHAR},
+      </if>
+      <if test="demandPriority != null">
+        #{demandPriority,jdbcType=VARCHAR},
+      </if>
+      <if test="demandLongitude != null">
+        #{demandLongitude,jdbcType=DECIMAL},
+      </if>
+      <if test="demandLatitude != null">
+        #{demandLatitude,jdbcType=DECIMAL},
+      </if>
+      <if test="workingLongitude != null">
+        #{workingLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="workingLatitude != null">
+        #{workingLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="workingHanging != null">
+        #{workingHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="workingCount != null">
+        #{workingCount,jdbcType=INTEGER},
+      </if>
+      <if test="dockingIspassReasonType != null">
+        #{dockingIspassReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="dockingIspassMsg != null">
+        #{dockingIspassMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverycheckPassTime != null">
+        #{deliverycheckPassTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delcheckDismissReasonType != null">
+        #{delcheckDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="delcheckDismissMsg != null">
+        #{delcheckDismissMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="issitebuilder != null">
+        #{issitebuilder,jdbcType=INTEGER},
+      </if>
+      <if test="handoverTime != null">
+        #{handoverTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="planningUpdateDate != null">
+        #{planningUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditygUpdateDate != null">
+        #{auditygUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="completeUpdateDate != null">
+        #{completeUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="planningauditUpdateDate != null">
+        #{planningauditUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="entrustUpdateDate != null">
+        #{entrustUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seaffirmUpdateDate != null">
+        #{seaffirmUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="actualinfoUpdateDate != null">
+        #{actualinfoUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditsurveyUpdateDate != null">
+        #{auditsurveyUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="triageUpdateDate != null">
+        #{triageUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sectriageUpdateDate != null">
+        #{sectriageUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hangingMigration != null">
+        #{hangingMigration,jdbcType=VARCHAR},
+      </if>
+      <if test="isReform != null">
+        #{isReform,jdbcType=VARCHAR},
+      </if>
+      <if test="reformMsg != null">
+        #{reformMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="reformFrom != null">
+        #{reformFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="reformType != null">
+        #{reformType,jdbcType=VARCHAR},
+      </if>
+      <if test="reformCell != null">
+        #{reformCell,jdbcType=VARCHAR},
+      </if>
+      <if test="reformLongtitude != null">
+        #{reformLongtitude,jdbcType=VARCHAR},
+      </if>
+      <if test="reformLatitude != null">
+        #{reformLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="reformBand != null">
+        #{reformBand,jdbcType=VARCHAR},
+      </if>
+      <if test="reformHanging != null">
+        #{reformHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="reformGauditIspass != null">
+        #{reformGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="reformGauditMsg != null">
+        #{reformGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="reformCompleteTime != null">
+        #{reformCompleteTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isExpand != null">
+        #{isExpand,jdbcType=VARCHAR},
+      </if>
+      <if test="currentBand != null">
+        #{currentBand,jdbcType=VARCHAR},
+      </if>
+      <if test="addorminusBand != null">
+        #{addorminusBand,jdbcType=VARCHAR},
+      </if>
+      <if test="expandRequireFrom != null">
+        #{expandRequireFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="expandRequireTime != null">
+        #{expandRequireTime,jdbcType=VARCHAR},
+      </if>
+      <if test="expandGauditIspass != null">
+        #{expandGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="expandGauditMsg != null">
+        #{expandGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="expandTriageTime != null">
+        #{expandTriageTime,jdbcType=VARCHAR},
+      </if>
+      <if test="expandForceTime != null">
+        #{expandForceTime,jdbcType=VARCHAR},
+      </if>
+      <if test="buildSchedule != null">
+        #{buildSchedule,jdbcType=VARCHAR},
+      </if>
+      <if test="isSubmitBuildReq != null">
+        #{isSubmitBuildReq,jdbcType=VARCHAR},
+      </if>
+      <if test="buildreqUpdateDate != null">
+        #{buildreqUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="swyKyAuditIspass != null">
+        #{swyKyAuditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="swyKyAuditReasonType != null">
+        #{swyKyAuditReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="swyKyAuditMsg != null">
+        #{swyKyAuditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="kyauditUpdateDate != null">
+        #{kyauditUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paramEnodebId != null">
+        #{paramEnodebId,jdbcType=VARCHAR},
+      </if>
+      <if test="paramCellName != null">
+        #{paramCellName,jdbcType=VARCHAR},
+      </if>
+      <if test="paramCellId != null">
+        #{paramCellId,jdbcType=VARCHAR},
+      </if>
+      <if test="paramPci != null">
+        #{paramPci,jdbcType=VARCHAR},
+      </if>
+      <if test="paramTac != null">
+        #{paramTac,jdbcType=VARCHAR},
+      </if>
+      <if test="paramconfigUpdateDate != null">
+        #{paramconfigUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cellStatus != null">
+        #{cellStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceStatus != null">
+        #{resourceStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceTime != null">
+        #{resourceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="haveChangeReport != null">
+        #{haveChangeReport,jdbcType=VARCHAR},
+      </if>
+      <if test="isBeautifyAntenna != null">
+        #{isBeautifyAntenna,jdbcType=VARCHAR},
+      </if>
+      <if test="beautifyAntennaType != null">
+        #{beautifyAntennaType,jdbcType=VARCHAR},
+      </if>
+      <if test="isEledownAntenna != null">
+        #{isEledownAntenna,jdbcType=VARCHAR},
+      </if>
+      <if test="eledownAntennaType != null">
+        #{eledownAntennaType,jdbcType=VARCHAR},
+      </if>
+      <if test="planningSectorCount != null">
+        #{planningSectorCount,jdbcType=INTEGER},
+      </if>
+      <if test="actualsurveySectorCount != null">
+        #{actualsurveySectorCount,jdbcType=INTEGER},
+      </if>
+      <if test="actualsurveyCellCount != null">
+        #{actualsurveyCellCount,jdbcType=INTEGER},
+      </if>
+      <if test="isConfigparam != null">
+        #{isConfigparam,jdbcType=VARCHAR},
+      </if>
+      <if test="paramIsAuto != null">
+        #{paramIsAuto,jdbcType=INTEGER},
+      </if>
+      <if test="systemStandard != null">
+        #{systemStandard,jdbcType=VARCHAR},
+      </if>
+      <if test="opensiteType != null">
+        #{opensiteType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSupportNbiot != null">
+        #{isSupportNbiot,jdbcType=VARCHAR},
+      </if>
+      <if test="isRefreshRemoval != null">
+        #{isRefreshRemoval,jdbcType=INTEGER},
+      </if>
+      <if test="isInterfaceReturn != null">
+        #{isInterfaceReturn,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="centralized.plan.model.PlanningDetailEntity">
+    update HB_PLANNINGDETAIL_V2
+    <set>
+      <if test="workid != null">
+        workid = #{workid,jdbcType=INTEGER},
+      </if>
+      <if test="categoryid != null">
+        categoryid = #{categoryid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="uploadtime != null">
+        uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uploadusername != null">
+        uploadusername = #{uploadusername,jdbcType=VARCHAR},
+      </if>
+      <if test="regionName != null">
+        region_name = #{regionName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null">
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="logicCell != null">
+        logic_cell = #{logicCell,jdbcType=VARCHAR},
+      </if>
+      <if test="physicsCell != null">
+        physics_cell = #{physicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="tdlPlaincellNum != null">
+        tdl_plaincell_num = #{tdlPlaincellNum,jdbcType=VARCHAR},
+      </if>
+      <if test="tdlPlaincellNumOld != null">
+        tdl_plaincell_num_old = #{tdlPlaincellNumOld,jdbcType=VARCHAR},
+      </if>
+      <if test="enodebType != null">
+        enodeb_type = #{enodebType,jdbcType=VARCHAR},
+      </if>
+      <if test="buildRequireNum != null">
+        build_require_num = #{buildRequireNum,jdbcType=VARCHAR},
+      </if>
+      <if test="coveringTarget != null">
+        covering_target = #{coveringTarget,jdbcType=VARCHAR},
+      </if>
+      <if test="planningLongitude != null">
+        planning_longitude = #{planningLongitude,jdbcType=DECIMAL},
+      </if>
+      <if test="planningLatitude != null">
+        planning_latitude = #{planningLatitude,jdbcType=DECIMAL},
+      </if>
+      <if test="lteBuildProperty != null">
+        lte_build_property = #{lteBuildProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="commonAddrProperty != null">
+        common_addr_property = #{commonAddrProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="commonAddrGsmCell != null">
+        common_addr_gsm_cell = #{commonAddrGsmCell,jdbcType=VARCHAR},
+      </if>
+      <if test="addrAreaType != null">
+        addr_area_type = #{addrAreaType,jdbcType=VARCHAR},
+      </if>
+      <if test="benumber != null">
+        benumber = #{benumber,jdbcType=VARCHAR},
+      </if>
+      <if test="celladdrstate != null">
+        celladdrstate = #{celladdrstate,jdbcType=VARCHAR},
+      </if>
+      <if test="areatype != null">
+        areatype = #{areatype,jdbcType=VARCHAR},
+      </if>
+      <if test="buildCellClassify != null">
+        build_cell_classify = #{buildCellClassify,jdbcType=VARCHAR},
+      </if>
+      <if test="tdlnum != null">
+        tdlnum = #{tdlnum,jdbcType=VARCHAR},
+      </if>
+      <if test="solutionBatch != null">
+        solution_batch = #{solutionBatch,jdbcType=VARCHAR},
+      </if>
+      <if test="vendorName != null">
+        vendor_name = #{vendorName,jdbcType=VARCHAR},
+      </if>
+      <if test="band != null">
+        band = #{band,jdbcType=VARCHAR},
+      </if>
+      <if test="lteIsfiberfar != null">
+        lte_isfiberfar = #{lteIsfiberfar,jdbcType=VARCHAR},
+      </if>
+      <if test="enodebConfiguration != null">
+        enodeb_configuration = #{enodebConfiguration,jdbcType=VARCHAR},
+      </if>
+      <if test="cellCount != null">
+        cell_count = #{cellCount,jdbcType=INTEGER},
+      </if>
+      <if test="carrierCount != null">
+        carrier_count = #{carrierCount,jdbcType=INTEGER},
+      </if>
+      <if test="bbuRemouldType != null">
+        bbu_remould_type = #{bbuRemouldType,jdbcType=VARCHAR},
+      </if>
+      <if test="bbuModel != null">
+        bbu_model = #{bbuModel,jdbcType=VARCHAR},
+      </if>
+      <if test="bbuCount != null">
+        bbu_count = #{bbuCount,jdbcType=INTEGER},
+      </if>
+      <if test="bbuInstallType != null">
+        bbu_install_type = #{bbuInstallType,jdbcType=VARCHAR},
+      </if>
+      <if test="rruRemouldType != null">
+        rru_remould_type = #{rruRemouldType,jdbcType=VARCHAR},
+      </if>
+      <if test="rruModel != null">
+        rru_model = #{rruModel,jdbcType=VARCHAR},
+      </if>
+      <if test="rruCount != null">
+        rru_count = #{rruCount,jdbcType=INTEGER},
+      </if>
+      <if test="rruChannelCount != null">
+        rru_channel_count = #{rruChannelCount,jdbcType=INTEGER},
+      </if>
+      <if test="rruCell != null">
+        rru_cell = #{rruCell,jdbcType=VARCHAR},
+      </if>
+      <if test="rruSupplyType != null">
+        rru_supply_type = #{rruSupplyType,jdbcType=VARCHAR},
+      </if>
+      <if test="reconnoiterPhysicsCell != null">
+        reconnoiter_physics_cell = #{reconnoiterPhysicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="prospectLongitude != null">
+        prospect_longitude = #{prospectLongitude,jdbcType=DECIMAL},
+      </if>
+      <if test="prospectLatitude != null">
+        prospect_latitude = #{prospectLatitude,jdbcType=DECIMAL},
+      </if>
+      <if test="reconnoiterHanging != null">
+        reconnoiter_hanging = #{reconnoiterHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="planningBearing != null">
+        planning_bearing = #{planningBearing,jdbcType=VARCHAR},
+      </if>
+      <if test="opticalHeight != null">
+        optical_height = #{opticalHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="reconnoiterIsfiberfar != null">
+        reconnoiter_isfiberfar = #{reconnoiterIsfiberfar,jdbcType=VARCHAR},
+      </if>
+      <if test="masttype != null">
+        masttype = #{masttype,jdbcType=VARCHAR},
+      </if>
+      <if test="newUsed1 != null">
+        new_used1 = #{newUsed1,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null">
+        height = #{height,jdbcType=INTEGER},
+      </if>
+      <if test="machineroomType != null">
+        machineroom_type = #{machineroomType,jdbcType=VARCHAR},
+      </if>
+      <if test="newUsed2 != null">
+        new_used2 = #{newUsed2,jdbcType=VARCHAR},
+      </if>
+      <if test="dfCommonAntenna != null">
+        df_common_antenna = #{dfCommonAntenna,jdbcType=VARCHAR},
+      </if>
+      <if test="antennaModel != null">
+        antenna_model = #{antennaModel,jdbcType=VARCHAR},
+      </if>
+      <if test="antennaCount != null">
+        antenna_count = #{antennaCount,jdbcType=INTEGER},
+      </if>
+      <if test="planningChangeMsg != null">
+        planning_change_msg = #{planningChangeMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="specialSolutionAdded != null">
+        special_solution_added = #{specialSolutionAdded,jdbcType=VARCHAR},
+      </if>
+      <if test="instituteDesign != null">
+        institute_design = #{instituteDesign,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isbackout != null">
+        isbackout = #{isbackout,jdbcType=VARCHAR},
+      </if>
+      <if test="backoutReasonType != null">
+        backout_reason_type = #{backoutReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="backoutReasonMsg != null">
+        backout_reason_msg = #{backoutReasonMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="planninGauditIspass != null">
+        plannin_gaudit_ispass = #{planninGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="planninDismissReasonType != null">
+        plannin_dismiss_reason_type = #{planninDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="planninGauditMsg != null">
+        plannin_gaudit_msg = #{planninGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="plannindataGauditIspass != null">
+        plannindata_gaudit_ispass = #{plannindataGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="plannindataReasonType != null">
+        plannindata_reason_type = #{plannindataReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="plannindataGauditMsg != null">
+        plannindata_gaudit_msg = #{plannindataGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyCoveredWay != null">
+        actualsurvey_covered_way = #{actualsurveyCoveredWay,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyLogicCell != null">
+        actualsurvey_logic_cell = #{actualsurveyLogicCell,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyPhysicsCell != null">
+        actualsurvey_physics_cell = #{actualsurveyPhysicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyLongitude != null">
+        actualsurvey_longitude = #{actualsurveyLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyLatitude != null">
+        actualsurvey_latitude = #{actualsurveyLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyHanging != null">
+        actualsurvey_hanging = #{actualsurveyHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="recentStationSpacing != null">
+        recent_station_spacing = #{recentStationSpacing,jdbcType=INTEGER},
+      </if>
+      <if test="recentStationCellname != null">
+        recent_station_cellname = #{recentStationCellname,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyBand != null">
+        actualsurvey_band = #{actualsurveyBand,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyBearing != null">
+        actualsurvey_bearing = #{actualsurveyBearing,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyDowntilt != null">
+        actualsurvey_downtilt = #{actualsurveyDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="actualsurveyCount != null">
+        actualsurvey_count = #{actualsurveyCount,jdbcType=INTEGER},
+      </if>
+      <if test="entrustTt != null">
+        entrust_tt = #{entrustTt,jdbcType=VARCHAR},
+      </if>
+      <if test="dockingIspassTt != null">
+        docking_ispass_tt = #{dockingIspassTt,jdbcType=VARCHAR},
+      </if>
+      <if test="joinTimeTt != null">
+        join_time_tt = #{joinTimeTt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dockingDismissReasonType != null">
+        docking_dismiss_reason_type = #{dockingDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="dockingDismissMsg != null">
+        docking_dismiss_msg = #{dockingDismissMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="celldistanceMigration != null">
+        celldistance_migration = #{celldistanceMigration,jdbcType=VARCHAR},
+      </if>
+      <if test="isexistChange != null">
+        isexist_change = #{isexistChange,jdbcType=VARCHAR},
+      </if>
+      <if test="changedReasonType != null">
+        changed_reason_type = #{changedReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="changedReasonMsg != null">
+        changed_reason_msg = #{changedReasonMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="changedTime != null">
+        changed_time = #{changedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="surveyGauditIspass != null">
+        survey_gaudit_ispass = #{surveyGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="surveyDismissReasonType != null">
+        survey_dismiss_reason_type = #{surveyDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="surveyGauditMsg != null">
+        survey_gaudit_msg = #{surveyGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="canSubmitTriage != null">
+        can_submit_triage = #{canSubmitTriage,jdbcType=VARCHAR},
+      </if>
+      <if test="triageBatch != null">
+        triage_batch = #{triageBatch,jdbcType=VARCHAR},
+      </if>
+      <if test="triageCount != null">
+        triage_count = #{triageCount,jdbcType=INTEGER},
+      </if>
+      <if test="triageLogicCell != null">
+        triage_logic_cell = #{triageLogicCell,jdbcType=VARCHAR},
+      </if>
+      <if test="triagePhysicsCell != null">
+        triage_physics_cell = #{triagePhysicsCell,jdbcType=VARCHAR},
+      </if>
+      <if test="triageLongitude != null">
+        triage_longitude = #{triageLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="triageLatitude != null">
+        triage_latitude = #{triageLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="triageBand != null">
+        triage_band = #{triageBand,jdbcType=VARCHAR},
+      </if>
+      <if test="triageHanging != null">
+        triage_hanging = #{triageHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="triageBearing != null">
+        triage_bearing = #{triageBearing,jdbcType=VARCHAR},
+      </if>
+      <if test="triageMachineDowntilt != null">
+        triage_machine_downtilt = #{triageMachineDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="triagePrefabelectronDowntilt != null">
+        triage_prefabelectron_downtilt = #{triagePrefabelectronDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="triageElectronDowntilt != null">
+        triage_electron_downtilt = #{triageElectronDowntilt,jdbcType=VARCHAR},
+      </if>
+      <if test="triageCelldistanceMigration != null">
+        triage_celldistance_migration = #{triageCelldistanceMigration,jdbcType=INTEGER},
+      </if>
+      <if test="triageRecentStationSpacing != null">
+        triage_recent_station_spacing = #{triageRecentStationSpacing,jdbcType=INTEGER},
+      </if>
+      <if test="triageStationCellname != null">
+        triage_station_cellname = #{triageStationCellname,jdbcType=VARCHAR},
+      </if>
+      <if test="triageCellResourceType != null">
+        triage_cell_resource_type = #{triageCellResourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="triageColocationType != null">
+        triage_colocation_type = #{triageColocationType,jdbcType=VARCHAR},
+      </if>
+      <if test="triageFillIspass != null">
+        triage_fill_ispass = #{triageFillIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="triageDismissReasonType != null">
+        triage_dismiss_reason_type = #{triageDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="triageFillMsg != null">
+        triage_fill_msg = #{triageFillMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceGauditIspass != null">
+        province_gaudit_ispass = #{provinceGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceDismissReasonType != null">
+        province_dismiss_reason_type = #{provinceDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceGauditMsg != null">
+        province_gaudit_msg = #{provinceGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="pmGauditIspass != null">
+        pm_gaudit_ispass = #{pmGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="pmFillMsg != null">
+        pm_fill_msg = #{pmFillMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="canSubmitRegaudit != null">
+        can_submit_regaudit = #{canSubmitRegaudit,jdbcType=VARCHAR},
+      </if>
+      <if test="submitRegauditReasonType != null">
+        submit_regaudit_reason_type = #{submitRegauditReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="submitRegauditMsg != null">
+        submit_regaudit_msg = #{submitRegauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="regauditRequestIspass != null">
+        regaudit_request_ispass = #{regauditRequestIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="auditOpinionType != null">
+        audit_opinion_type = #{auditOpinionType,jdbcType=VARCHAR},
+      </if>
+      <if test="auditOpinionMsg != null">
+        audit_opinion_msg = #{auditOpinionMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="demandSource != null">
+        demand_source = #{demandSource,jdbcType=VARCHAR},
+      </if>
+      <if test="demandReference != null">
+        demand_reference = #{demandReference,jdbcType=VARCHAR},
+      </if>
+      <if test="demandPriority != null">
+        demand_priority = #{demandPriority,jdbcType=VARCHAR},
+      </if>
+      <if test="demandLongitude != null">
+        demand_longitude = #{demandLongitude,jdbcType=DECIMAL},
+      </if>
+      <if test="demandLatitude != null">
+        demand_latitude = #{demandLatitude,jdbcType=DECIMAL},
+      </if>
+      <if test="workingLongitude != null">
+        working_longitude = #{workingLongitude,jdbcType=VARCHAR},
+      </if>
+      <if test="workingLatitude != null">
+        working_latitude = #{workingLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="workingHanging != null">
+        working_hanging = #{workingHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="workingCount != null">
+        working_count = #{workingCount,jdbcType=INTEGER},
+      </if>
+      <if test="dockingIspassReasonType != null">
+        docking_ispass_reason_type = #{dockingIspassReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="dockingIspassMsg != null">
+        docking_ispass_msg = #{dockingIspassMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverycheckPassTime != null">
+        deliverycheck_pass_time = #{deliverycheckPassTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delcheckDismissReasonType != null">
+        delcheck_dismiss_reason_type = #{delcheckDismissReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="delcheckDismissMsg != null">
+        delcheck_dismiss_msg = #{delcheckDismissMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="issitebuilder != null">
+        issitebuilder = #{issitebuilder,jdbcType=INTEGER},
+      </if>
+      <if test="handoverTime != null">
+        handover_time = #{handoverTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="planningUpdateDate != null">
+        planning_update_date = #{planningUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditygUpdateDate != null">
+        audityg_update_date = #{auditygUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="completeUpdateDate != null">
+        complete_update_date = #{completeUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="planningauditUpdateDate != null">
+        planningaudit_update_date = #{planningauditUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="entrustUpdateDate != null">
+        entrust_update_date = #{entrustUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seaffirmUpdateDate != null">
+        seaffirm_update_date = #{seaffirmUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="actualinfoUpdateDate != null">
+        actualinfo_update_date = #{actualinfoUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditsurveyUpdateDate != null">
+        auditsurvey_update_date = #{auditsurveyUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="triageUpdateDate != null">
+        triage_update_date = #{triageUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sectriageUpdateDate != null">
+        sectriage_update_date = #{sectriageUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hangingMigration != null">
+        hanging_migration = #{hangingMigration,jdbcType=VARCHAR},
+      </if>
+      <if test="isReform != null">
+        is_reform = #{isReform,jdbcType=VARCHAR},
+      </if>
+      <if test="reformMsg != null">
+        reform_msg = #{reformMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="reformFrom != null">
+        reform_from = #{reformFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="reformType != null">
+        reform_type = #{reformType,jdbcType=VARCHAR},
+      </if>
+      <if test="reformCell != null">
+        reform_cell = #{reformCell,jdbcType=VARCHAR},
+      </if>
+      <if test="reformLongtitude != null">
+        reform_longtitude = #{reformLongtitude,jdbcType=VARCHAR},
+      </if>
+      <if test="reformLatitude != null">
+        reform_latitude = #{reformLatitude,jdbcType=VARCHAR},
+      </if>
+      <if test="reformBand != null">
+        reform_band = #{reformBand,jdbcType=VARCHAR},
+      </if>
+      <if test="reformHanging != null">
+        reform_hanging = #{reformHanging,jdbcType=VARCHAR},
+      </if>
+      <if test="reformGauditIspass != null">
+        reform_gaudit_ispass = #{reformGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="reformGauditMsg != null">
+        reform_gaudit_msg = #{reformGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="reformCompleteTime != null">
+        reform_complete_time = #{reformCompleteTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isExpand != null">
+        is_expand = #{isExpand,jdbcType=VARCHAR},
+      </if>
+      <if test="currentBand != null">
+        current_band = #{currentBand,jdbcType=VARCHAR},
+      </if>
+      <if test="addorminusBand != null">
+        addorminus_band = #{addorminusBand,jdbcType=VARCHAR},
+      </if>
+      <if test="expandRequireFrom != null">
+        expand_require_from = #{expandRequireFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="expandRequireTime != null">
+        expand_require_time = #{expandRequireTime,jdbcType=VARCHAR},
+      </if>
+      <if test="expandGauditIspass != null">
+        expand_gaudit_ispass = #{expandGauditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="expandGauditMsg != null">
+        expand_gaudit_msg = #{expandGauditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="expandTriageTime != null">
+        expand_triage_time = #{expandTriageTime,jdbcType=VARCHAR},
+      </if>
+      <if test="expandForceTime != null">
+        expand_force_time = #{expandForceTime,jdbcType=VARCHAR},
+      </if>
+      <if test="buildSchedule != null">
+        build_schedule = #{buildSchedule,jdbcType=VARCHAR},
+      </if>
+      <if test="isSubmitBuildReq != null">
+        is_submit_build_req = #{isSubmitBuildReq,jdbcType=VARCHAR},
+      </if>
+      <if test="buildreqUpdateDate != null">
+        buildreq_update_date = #{buildreqUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="swyKyAuditIspass != null">
+        swy_ky_audit_ispass = #{swyKyAuditIspass,jdbcType=VARCHAR},
+      </if>
+      <if test="swyKyAuditReasonType != null">
+        swy_ky_audit_reason_type = #{swyKyAuditReasonType,jdbcType=VARCHAR},
+      </if>
+      <if test="swyKyAuditMsg != null">
+        swy_ky_audit_msg = #{swyKyAuditMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="kyauditUpdateDate != null">
+        kyaudit_update_date = #{kyauditUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paramEnodebId != null">
+        param_enodeb_id = #{paramEnodebId,jdbcType=VARCHAR},
+      </if>
+      <if test="paramCellName != null">
+        param_cell_name = #{paramCellName,jdbcType=VARCHAR},
+      </if>
+      <if test="paramCellId != null">
+        param_cell_id = #{paramCellId,jdbcType=VARCHAR},
+      </if>
+      <if test="paramPci != null">
+        param_pci = #{paramPci,jdbcType=VARCHAR},
+      </if>
+      <if test="paramTac != null">
+        param_tac = #{paramTac,jdbcType=VARCHAR},
+      </if>
+      <if test="paramconfigUpdateDate != null">
+        paramconfig_update_date = #{paramconfigUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cellStatus != null">
+        cell_status = #{cellStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceStatus != null">
+        resource_status = #{resourceStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceTime != null">
+        resource_time = #{resourceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="haveChangeReport != null">
+        have_change_report = #{haveChangeReport,jdbcType=VARCHAR},
+      </if>
+      <if test="isBeautifyAntenna != null">
+        is_beautify_antenna = #{isBeautifyAntenna,jdbcType=VARCHAR},
+      </if>
+      <if test="beautifyAntennaType != null">
+        beautify_antenna_type = #{beautifyAntennaType,jdbcType=VARCHAR},
+      </if>
+      <if test="isEledownAntenna != null">
+        is_eledown_antenna = #{isEledownAntenna,jdbcType=VARCHAR},
+      </if>
+      <if test="eledownAntennaType != null">
+        eledown_antenna_type = #{eledownAntennaType,jdbcType=VARCHAR},
+      </if>
+      <if test="planningSectorCount != null">
+        planning_sector_count = #{planningSectorCount,jdbcType=INTEGER},
+      </if>
+      <if test="actualsurveySectorCount != null">
+        actualsurvey_sector_count = #{actualsurveySectorCount,jdbcType=INTEGER},
+      </if>
+      <if test="actualsurveyCellCount != null">
+        actualsurvey_cell_count = #{actualsurveyCellCount,jdbcType=INTEGER},
+      </if>
+      <if test="isConfigparam != null">
+        is_configparam = #{isConfigparam,jdbcType=VARCHAR},
+      </if>
+      <if test="paramIsAuto != null">
+        param_is_auto = #{paramIsAuto,jdbcType=INTEGER},
+      </if>
+      <if test="systemStandard != null">
+        system_standard = #{systemStandard,jdbcType=VARCHAR},
+      </if>
+      <if test="opensiteType != null">
+        opensite_type = #{opensiteType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSupportNbiot != null">
+        is_support_nbiot = #{isSupportNbiot,jdbcType=VARCHAR},
+      </if>
+      <if test="isRefreshRemoval != null">
+        is_refresh_removal = #{isRefreshRemoval,jdbcType=INTEGER},
+      </if>
+      <if test="isInterfaceReturn != null">
+        is_interface_return = #{isInterfaceReturn,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="centralized.plan.model.PlanningDetailEntity">
+    update HB_PLANNINGDETAIL_V2
+    set workid = #{workid,jdbcType=INTEGER},
+      categoryid = #{categoryid,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      uploadusername = #{uploadusername,jdbcType=VARCHAR},
+      region_name = #{regionName,jdbcType=VARCHAR},
+      city_name = #{cityName,jdbcType=VARCHAR},
+      logic_cell = #{logicCell,jdbcType=VARCHAR},
+      physics_cell = #{physicsCell,jdbcType=VARCHAR},
+      tdl_plaincell_num = #{tdlPlaincellNum,jdbcType=VARCHAR},
+      tdl_plaincell_num_old = #{tdlPlaincellNumOld,jdbcType=VARCHAR},
+      enodeb_type = #{enodebType,jdbcType=VARCHAR},
+      build_require_num = #{buildRequireNum,jdbcType=VARCHAR},
+      covering_target = #{coveringTarget,jdbcType=VARCHAR},
+      planning_longitude = #{planningLongitude,jdbcType=DECIMAL},
+      planning_latitude = #{planningLatitude,jdbcType=DECIMAL},
+      lte_build_property = #{lteBuildProperty,jdbcType=VARCHAR},
+      common_addr_property = #{commonAddrProperty,jdbcType=VARCHAR},
+      common_addr_gsm_cell = #{commonAddrGsmCell,jdbcType=VARCHAR},
+      addr_area_type = #{addrAreaType,jdbcType=VARCHAR},
+      benumber = #{benumber,jdbcType=VARCHAR},
+      celladdrstate = #{celladdrstate,jdbcType=VARCHAR},
+      areatype = #{areatype,jdbcType=VARCHAR},
+      build_cell_classify = #{buildCellClassify,jdbcType=VARCHAR},
+      tdlnum = #{tdlnum,jdbcType=VARCHAR},
+      solution_batch = #{solutionBatch,jdbcType=VARCHAR},
+      vendor_name = #{vendorName,jdbcType=VARCHAR},
+      band = #{band,jdbcType=VARCHAR},
+      lte_isfiberfar = #{lteIsfiberfar,jdbcType=VARCHAR},
+      enodeb_configuration = #{enodebConfiguration,jdbcType=VARCHAR},
+      cell_count = #{cellCount,jdbcType=INTEGER},
+      carrier_count = #{carrierCount,jdbcType=INTEGER},
+      bbu_remould_type = #{bbuRemouldType,jdbcType=VARCHAR},
+      bbu_model = #{bbuModel,jdbcType=VARCHAR},
+      bbu_count = #{bbuCount,jdbcType=INTEGER},
+      bbu_install_type = #{bbuInstallType,jdbcType=VARCHAR},
+      rru_remould_type = #{rruRemouldType,jdbcType=VARCHAR},
+      rru_model = #{rruModel,jdbcType=VARCHAR},
+      rru_count = #{rruCount,jdbcType=INTEGER},
+      rru_channel_count = #{rruChannelCount,jdbcType=INTEGER},
+      rru_cell = #{rruCell,jdbcType=VARCHAR},
+      rru_supply_type = #{rruSupplyType,jdbcType=VARCHAR},
+      reconnoiter_physics_cell = #{reconnoiterPhysicsCell,jdbcType=VARCHAR},
+      prospect_longitude = #{prospectLongitude,jdbcType=DECIMAL},
+      prospect_latitude = #{prospectLatitude,jdbcType=DECIMAL},
+      reconnoiter_hanging = #{reconnoiterHanging,jdbcType=VARCHAR},
+      planning_bearing = #{planningBearing,jdbcType=VARCHAR},
+      optical_height = #{opticalHeight,jdbcType=VARCHAR},
+      reconnoiter_isfiberfar = #{reconnoiterIsfiberfar,jdbcType=VARCHAR},
+      masttype = #{masttype,jdbcType=VARCHAR},
+      new_used1 = #{newUsed1,jdbcType=VARCHAR},
+      height = #{height,jdbcType=INTEGER},
+      machineroom_type = #{machineroomType,jdbcType=VARCHAR},
+      new_used2 = #{newUsed2,jdbcType=VARCHAR},
+      df_common_antenna = #{dfCommonAntenna,jdbcType=VARCHAR},
+      antenna_model = #{antennaModel,jdbcType=VARCHAR},
+      antenna_count = #{antennaCount,jdbcType=INTEGER},
+      planning_change_msg = #{planningChangeMsg,jdbcType=VARCHAR},
+      special_solution_added = #{specialSolutionAdded,jdbcType=VARCHAR},
+      institute_design = #{instituteDesign,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      isbackout = #{isbackout,jdbcType=VARCHAR},
+      backout_reason_type = #{backoutReasonType,jdbcType=VARCHAR},
+      backout_reason_msg = #{backoutReasonMsg,jdbcType=VARCHAR},
+      plannin_gaudit_ispass = #{planninGauditIspass,jdbcType=VARCHAR},
+      plannin_dismiss_reason_type = #{planninDismissReasonType,jdbcType=VARCHAR},
+      plannin_gaudit_msg = #{planninGauditMsg,jdbcType=VARCHAR},
+      plannindata_gaudit_ispass = #{plannindataGauditIspass,jdbcType=VARCHAR},
+      plannindata_reason_type = #{plannindataReasonType,jdbcType=VARCHAR},
+      plannindata_gaudit_msg = #{plannindataGauditMsg,jdbcType=VARCHAR},
+      actualsurvey_covered_way = #{actualsurveyCoveredWay,jdbcType=VARCHAR},
+      actualsurvey_logic_cell = #{actualsurveyLogicCell,jdbcType=VARCHAR},
+      actualsurvey_physics_cell = #{actualsurveyPhysicsCell,jdbcType=VARCHAR},
+      actualsurvey_longitude = #{actualsurveyLongitude,jdbcType=VARCHAR},
+      actualsurvey_latitude = #{actualsurveyLatitude,jdbcType=VARCHAR},
+      actualsurvey_hanging = #{actualsurveyHanging,jdbcType=VARCHAR},
+      recent_station_spacing = #{recentStationSpacing,jdbcType=INTEGER},
+      recent_station_cellname = #{recentStationCellname,jdbcType=VARCHAR},
+      actualsurvey_band = #{actualsurveyBand,jdbcType=VARCHAR},
+      actualsurvey_bearing = #{actualsurveyBearing,jdbcType=VARCHAR},
+      actualsurvey_downtilt = #{actualsurveyDowntilt,jdbcType=VARCHAR},
+      actualsurvey_count = #{actualsurveyCount,jdbcType=INTEGER},
+      entrust_tt = #{entrustTt,jdbcType=VARCHAR},
+      docking_ispass_tt = #{dockingIspassTt,jdbcType=VARCHAR},
+      join_time_tt = #{joinTimeTt,jdbcType=TIMESTAMP},
+      docking_dismiss_reason_type = #{dockingDismissReasonType,jdbcType=VARCHAR},
+      docking_dismiss_msg = #{dockingDismissMsg,jdbcType=VARCHAR},
+      celldistance_migration = #{celldistanceMigration,jdbcType=VARCHAR},
+      isexist_change = #{isexistChange,jdbcType=VARCHAR},
+      changed_reason_type = #{changedReasonType,jdbcType=VARCHAR},
+      changed_reason_msg = #{changedReasonMsg,jdbcType=VARCHAR},
+      changed_time = #{changedTime,jdbcType=TIMESTAMP},
+      survey_gaudit_ispass = #{surveyGauditIspass,jdbcType=VARCHAR},
+      survey_dismiss_reason_type = #{surveyDismissReasonType,jdbcType=VARCHAR},
+      survey_gaudit_msg = #{surveyGauditMsg,jdbcType=VARCHAR},
+      can_submit_triage = #{canSubmitTriage,jdbcType=VARCHAR},
+      triage_batch = #{triageBatch,jdbcType=VARCHAR},
+      triage_count = #{triageCount,jdbcType=INTEGER},
+      triage_logic_cell = #{triageLogicCell,jdbcType=VARCHAR},
+      triage_physics_cell = #{triagePhysicsCell,jdbcType=VARCHAR},
+      triage_longitude = #{triageLongitude,jdbcType=VARCHAR},
+      triage_latitude = #{triageLatitude,jdbcType=VARCHAR},
+      triage_band = #{triageBand,jdbcType=VARCHAR},
+      triage_hanging = #{triageHanging,jdbcType=VARCHAR},
+      triage_bearing = #{triageBearing,jdbcType=VARCHAR},
+      triage_machine_downtilt = #{triageMachineDowntilt,jdbcType=VARCHAR},
+      triage_prefabelectron_downtilt = #{triagePrefabelectronDowntilt,jdbcType=VARCHAR},
+      triage_electron_downtilt = #{triageElectronDowntilt,jdbcType=VARCHAR},
+      triage_celldistance_migration = #{triageCelldistanceMigration,jdbcType=INTEGER},
+      triage_recent_station_spacing = #{triageRecentStationSpacing,jdbcType=INTEGER},
+      triage_station_cellname = #{triageStationCellname,jdbcType=VARCHAR},
+      triage_cell_resource_type = #{triageCellResourceType,jdbcType=VARCHAR},
+      triage_colocation_type = #{triageColocationType,jdbcType=VARCHAR},
+      triage_fill_ispass = #{triageFillIspass,jdbcType=VARCHAR},
+      triage_dismiss_reason_type = #{triageDismissReasonType,jdbcType=VARCHAR},
+      triage_fill_msg = #{triageFillMsg,jdbcType=VARCHAR},
+      province_gaudit_ispass = #{provinceGauditIspass,jdbcType=VARCHAR},
+      province_dismiss_reason_type = #{provinceDismissReasonType,jdbcType=VARCHAR},
+      province_gaudit_msg = #{provinceGauditMsg,jdbcType=VARCHAR},
+      pm_gaudit_ispass = #{pmGauditIspass,jdbcType=VARCHAR},
+      pm_fill_msg = #{pmFillMsg,jdbcType=VARCHAR},
+      can_submit_regaudit = #{canSubmitRegaudit,jdbcType=VARCHAR},
+      submit_regaudit_reason_type = #{submitRegauditReasonType,jdbcType=VARCHAR},
+      submit_regaudit_msg = #{submitRegauditMsg,jdbcType=VARCHAR},
+      regaudit_request_ispass = #{regauditRequestIspass,jdbcType=VARCHAR},
+      audit_opinion_type = #{auditOpinionType,jdbcType=VARCHAR},
+      audit_opinion_msg = #{auditOpinionMsg,jdbcType=VARCHAR},
+      demand_source = #{demandSource,jdbcType=VARCHAR},
+      demand_reference = #{demandReference,jdbcType=VARCHAR},
+      demand_priority = #{demandPriority,jdbcType=VARCHAR},
+      demand_longitude = #{demandLongitude,jdbcType=DECIMAL},
+      demand_latitude = #{demandLatitude,jdbcType=DECIMAL},
+      working_longitude = #{workingLongitude,jdbcType=VARCHAR},
+      working_latitude = #{workingLatitude,jdbcType=VARCHAR},
+      working_hanging = #{workingHanging,jdbcType=VARCHAR},
+      working_count = #{workingCount,jdbcType=INTEGER},
+      docking_ispass_reason_type = #{dockingIspassReasonType,jdbcType=VARCHAR},
+      docking_ispass_msg = #{dockingIspassMsg,jdbcType=VARCHAR},
+      deliverycheck_pass_time = #{deliverycheckPassTime,jdbcType=TIMESTAMP},
+      delcheck_dismiss_reason_type = #{delcheckDismissReasonType,jdbcType=VARCHAR},
+      delcheck_dismiss_msg = #{delcheckDismissMsg,jdbcType=VARCHAR},
+      issitebuilder = #{issitebuilder,jdbcType=INTEGER},
+      handover_time = #{handoverTime,jdbcType=TIMESTAMP},
+      planning_update_date = #{planningUpdateDate,jdbcType=TIMESTAMP},
+      audityg_update_date = #{auditygUpdateDate,jdbcType=TIMESTAMP},
+      complete_update_date = #{completeUpdateDate,jdbcType=TIMESTAMP},
+      planningaudit_update_date = #{planningauditUpdateDate,jdbcType=TIMESTAMP},
+      entrust_update_date = #{entrustUpdateDate,jdbcType=TIMESTAMP},
+      seaffirm_update_date = #{seaffirmUpdateDate,jdbcType=TIMESTAMP},
+      actualinfo_update_date = #{actualinfoUpdateDate,jdbcType=TIMESTAMP},
+      auditsurvey_update_date = #{auditsurveyUpdateDate,jdbcType=TIMESTAMP},
+      triage_update_date = #{triageUpdateDate,jdbcType=TIMESTAMP},
+      sectriage_update_date = #{sectriageUpdateDate,jdbcType=TIMESTAMP},
+      hanging_migration = #{hangingMigration,jdbcType=VARCHAR},
+      is_reform = #{isReform,jdbcType=VARCHAR},
+      reform_msg = #{reformMsg,jdbcType=VARCHAR},
+      reform_from = #{reformFrom,jdbcType=VARCHAR},
+      reform_type = #{reformType,jdbcType=VARCHAR},
+      reform_cell = #{reformCell,jdbcType=VARCHAR},
+      reform_longtitude = #{reformLongtitude,jdbcType=VARCHAR},
+      reform_latitude = #{reformLatitude,jdbcType=VARCHAR},
+      reform_band = #{reformBand,jdbcType=VARCHAR},
+      reform_hanging = #{reformHanging,jdbcType=VARCHAR},
+      reform_gaudit_ispass = #{reformGauditIspass,jdbcType=VARCHAR},
+      reform_gaudit_msg = #{reformGauditMsg,jdbcType=VARCHAR},
+      reform_complete_time = #{reformCompleteTime,jdbcType=VARCHAR},
+      is_expand = #{isExpand,jdbcType=VARCHAR},
+      current_band = #{currentBand,jdbcType=VARCHAR},
+      addorminus_band = #{addorminusBand,jdbcType=VARCHAR},
+      expand_require_from = #{expandRequireFrom,jdbcType=VARCHAR},
+      expand_require_time = #{expandRequireTime,jdbcType=VARCHAR},
+      expand_gaudit_ispass = #{expandGauditIspass,jdbcType=VARCHAR},
+      expand_gaudit_msg = #{expandGauditMsg,jdbcType=VARCHAR},
+      expand_triage_time = #{expandTriageTime,jdbcType=VARCHAR},
+      expand_force_time = #{expandForceTime,jdbcType=VARCHAR},
+      build_schedule = #{buildSchedule,jdbcType=VARCHAR},
+      is_submit_build_req = #{isSubmitBuildReq,jdbcType=VARCHAR},
+      buildreq_update_date = #{buildreqUpdateDate,jdbcType=TIMESTAMP},
+      swy_ky_audit_ispass = #{swyKyAuditIspass,jdbcType=VARCHAR},
+      swy_ky_audit_reason_type = #{swyKyAuditReasonType,jdbcType=VARCHAR},
+      swy_ky_audit_msg = #{swyKyAuditMsg,jdbcType=VARCHAR},
+      kyaudit_update_date = #{kyauditUpdateDate,jdbcType=TIMESTAMP},
+      param_enodeb_id = #{paramEnodebId,jdbcType=VARCHAR},
+      param_cell_name = #{paramCellName,jdbcType=VARCHAR},
+      param_cell_id = #{paramCellId,jdbcType=VARCHAR},
+      param_pci = #{paramPci,jdbcType=VARCHAR},
+      param_tac = #{paramTac,jdbcType=VARCHAR},
+      paramconfig_update_date = #{paramconfigUpdateDate,jdbcType=TIMESTAMP},
+      cell_status = #{cellStatus,jdbcType=VARCHAR},
+      resource_status = #{resourceStatus,jdbcType=VARCHAR},
+      resource_time = #{resourceTime,jdbcType=TIMESTAMP},
+      have_change_report = #{haveChangeReport,jdbcType=VARCHAR},
+      is_beautify_antenna = #{isBeautifyAntenna,jdbcType=VARCHAR},
+      beautify_antenna_type = #{beautifyAntennaType,jdbcType=VARCHAR},
+      is_eledown_antenna = #{isEledownAntenna,jdbcType=VARCHAR},
+      eledown_antenna_type = #{eledownAntennaType,jdbcType=VARCHAR},
+      planning_sector_count = #{planningSectorCount,jdbcType=INTEGER},
+      actualsurvey_sector_count = #{actualsurveySectorCount,jdbcType=INTEGER},
+      actualsurvey_cell_count = #{actualsurveyCellCount,jdbcType=INTEGER},
+      is_configparam = #{isConfigparam,jdbcType=VARCHAR},
+      param_is_auto = #{paramIsAuto,jdbcType=INTEGER},
+      system_standard = #{systemStandard,jdbcType=VARCHAR},
+      opensite_type = #{opensiteType,jdbcType=VARCHAR},
+      is_support_nbiot = #{isSupportNbiot,jdbcType=VARCHAR},
+      is_refresh_removal = #{isRefreshRemoval,jdbcType=INTEGER},
+      is_interface_return = #{isInterfaceReturn,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
