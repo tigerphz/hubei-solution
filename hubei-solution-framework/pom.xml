@@ -16,5 +16,6 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>hubei-solution-framework-security</module>
+        <module>hubei-solution-framework-common</module>
     </modules>
 </project>

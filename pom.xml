@@ -16,10 +16,8 @@
 
   <modules>
     <module>hubei-solution-parent</module>
-    <module>centralized-plan</module>
     <module>hubei-solution-eurekaserver</module>
     <module>system-manager</module>
     <module>hubei-solution-framework</module>
-    <module>user-manager</module>
   </modules>
 </project>

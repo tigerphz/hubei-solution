@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="system.manager.persist.daomapper.SysRoleInfoMapper">
+  <resultMap id="BaseResultMap" type="system.manager.model.SysRoleInfo">
+    <result column="roleid" jdbcType="BIGINT" property="roleid" />
+    <result column="rolename" jdbcType="VARCHAR" property="rolename" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="createuserid" jdbcType="BIGINT" property="createuserid" />
+    <result column="createdate" jdbcType="TIMESTAMP" property="createdate" />
+    <result column="createusername" jdbcType="VARCHAR" property="createusername" />
+    <result column="modifyuserid" jdbcType="BIGINT" property="modifyuserid" />
+    <result column="modifydate" jdbcType="TIMESTAMP" property="modifydate" />
+    <result column="modifyusername" jdbcType="VARCHAR" property="modifyusername" />
+  </resultMap>
+  <insert id="insert" parameterType="system.manager.model.SysRoleInfo">
+    insert into t_sys_role (roleid, rolename, status, 
+      description, createuserid, createdate, 
+      createusername, modifyuserid, modifydate, 
+      modifyusername)
+    values (#{roleid,jdbcType=BIGINT}, #{rolename,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{description,jdbcType=VARCHAR}, #{createuserid,jdbcType=BIGINT}, #{createdate,jdbcType=TIMESTAMP}, 
+      #{createusername,jdbcType=VARCHAR}, #{modifyuserid,jdbcType=BIGINT}, #{modifydate,jdbcType=TIMESTAMP}, 
+      #{modifyusername,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="system.manager.model.SysRoleInfo">
+    insert into t_sys_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleid != null">
+        roleid,
+      </if>
+      <if test="rolename != null">
+        rolename,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="createuserid != null">
+        createuserid,
+      </if>
+      <if test="createdate != null">
+        createdate,
+      </if>
+      <if test="createusername != null">
+        createusername,
+      </if>
+      <if test="modifyuserid != null">
+        modifyuserid,
+      </if>
+      <if test="modifydate != null">
+        modifydate,
+      </if>
+      <if test="modifyusername != null">
+        modifyusername,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleid != null">
+        #{roleid,jdbcType=BIGINT},
+      </if>
+      <if test="rolename != null">
+        #{rolename,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=BIGINT},
+      </if>
+      <if test="createdate != null">
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createusername != null">
+        #{createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyuserid != null">
+        #{modifyuserid,jdbcType=BIGINT},
+      </if>
+      <if test="modifydate != null">
+        #{modifydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyusername != null">
+        #{modifyusername,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

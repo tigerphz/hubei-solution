@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS t_sys_user;
+CREATE TABLE t_sys_user
+(
+  userid BIGINT,
+  username VARCHAR(50), #用户名
+  snowflake VARCHAR(50),#真名
+  nickname VARCHAR(50), #昵称
+  passwordhash VARCHAR(50),#通过PasswordSalt混淆加密后的密码散列码
+  passwordsalt VARCHAR(50),#混淆码
+  gender INTEGER ,#性别
+  status INTEGER ,#状态
+  phone VARCHAR(20),#固定电话
+  cellphone VARCHAR(20),#移动电话
+  identitycard VARCHAR(30), #身份证号码
+  fax VARCHAR(20),#传真
+  email VARCHAR(20),#邮件
+  qq VARCHAR(20),#QQ
+  address VARCHAR(100),#地址
+  deptid BIGINT, #部门ID
+
+  createuserid BIGINT,
+  createdate DATETIME,
+  createusername VARCHAR(50),
+  modifyuserid BIGINT,
+  modifydate DATETIME,
+  modifyusername VARCHAR(50)
+);

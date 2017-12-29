@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS t_sys_role;
+create TABLE t_sys_role
+(
+  roleid BIGINT,
+  rolename VARCHAR(50),
+  status INTEGER, #状态
+  description  VARCHAR(200),
+
+  createuserid BIGINT,
+  createdate DATETIME,
+  createusername VARCHAR(50),
+  modifyuserid BIGINT,
+  modifydate DATETIME,
+  modifyusername VARCHAR(50)
+);

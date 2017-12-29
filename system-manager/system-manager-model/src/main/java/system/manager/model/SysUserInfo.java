@@ -1,140 +1,225 @@
 package system.manager.model;
 
+import java.util.Date;
+
 public class SysUserInfo {
+    private Long userid;
 
-    private String UserName;
+    private String username;
 
-    /// <summary>
-    /// 通过PasswordSalt混淆加密后的密码散列码
-    /// </summary>
-    private String PasswordHash;
+    private String snowflake;
 
-    /// <summary>
-    /// 混淆码
-    /// </summary>
-    private String PasswordSalt;
+    private String nickname;
 
-    private Long DeptID;
+    private String passwordhash;
 
-    private String Phone;
+    private String passwordsalt;
 
-    private String Fax;
+    private Integer gender;
 
-    private String Email;
+    private Integer status;
 
-    private String QQ;
+    private String phone;
 
-    private String NickName;
+    private String cellphone;
 
-    private String Address;
+    private String identitycard;
 
-    private String RealName;
+    private String fax;
 
-    private Integer Gender;
+    private String email;
 
-    private Integer Status;
+    private String qq;
 
-    public String getUserName() {
-        return UserName;
+    private String address;
+
+    private Long deptid;
+
+    private Long createuserid;
+
+    private Date createdate;
+
+    private String createusername;
+
+    private Long modifyuserid;
+
+    private Date modifydate;
+
+    private String modifyusername;
+
+    public Long getUserid() {
+        return userid;
     }
 
-    public void setUserName(String userName) {
-        UserName = userName;
+    public void setUserid(Long userid) {
+        this.userid = userid;
     }
 
-    public String getPasswordHash() {
-        return PasswordHash;
+    public String getUsername() {
+        return username;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        PasswordHash = passwordHash;
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
-    public String getPasswordSalt() {
-        return PasswordSalt;
+    public String getSnowflake() {
+        return snowflake;
     }
 
-    public void setPasswordSalt(String passwordSalt) {
-        PasswordSalt = passwordSalt;
+    public void setSnowflake(String snowflake) {
+        this.snowflake = snowflake == null ? null : snowflake.trim();
     }
 
-    public Long getDeptID() {
-        return DeptID;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setDeptID(Long deptID) {
-        DeptID = deptID;
+    public void setNickname(String nickname) {
+        this.nickname = nickname == null ? null : nickname.trim();
     }
 
-    public String getPhone() {
-        return Phone;
+    public String getPasswordhash() {
+        return passwordhash;
     }
 
-    public void setPhone(String phone) {
-        Phone = phone;
+    public void setPasswordhash(String passwordhash) {
+        this.passwordhash = passwordhash == null ? null : passwordhash.trim();
     }
 
-    public String getFax() {
-        return Fax;
+    public String getPasswordsalt() {
+        return passwordsalt;
     }
 
-    public void setFax(String fax) {
-        Fax = fax;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getQQ() {
-        return QQ;
-    }
-
-    public void setQQ(String QQ) {
-        this.QQ = QQ;
-    }
-
-    public String getNickName() {
-        return NickName;
-    }
-
-    public void setNickName(String nickName) {
-        NickName = nickName;
-    }
-
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
-
-    public String getRealName() {
-        return RealName;
-    }
-
-    public void setRealName(String realName) {
-        RealName = realName;
+    public void setPasswordsalt(String passwordsalt) {
+        this.passwordsalt = passwordsalt == null ? null : passwordsalt.trim();
     }
 
     public Integer getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(Integer gender) {
-        Gender = gender;
+        this.gender = gender;
     }
 
     public Integer getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(Integer status) {
-        Status = status;
+        this.status = status;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone == null ? null : cellphone.trim();
+    }
+
+    public String getIdentitycard() {
+        return identitycard;
+    }
+
+    public void setIdentitycard(String identitycard) {
+        this.identitycard = identitycard == null ? null : identitycard.trim();
+    }
+
+    public String getFax() {
+        return fax;
+    }
+
+    public void setFax(String fax) {
+        this.fax = fax == null ? null : fax.trim();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
+    public String getQq() {
+        return qq;
+    }
+
+    public void setQq(String qq) {
+        this.qq = qq == null ? null : qq.trim();
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
+    }
+
+    public Long getDeptid() {
+        return deptid;
+    }
+
+    public void setDeptid(Long deptid) {
+        this.deptid = deptid;
+    }
+
+    public Long getCreateuserid() {
+        return createuserid;
+    }
+
+    public void setCreateuserid(Long createuserid) {
+        this.createuserid = createuserid;
+    }
+
+    public Date getCreatedate() {
+        return createdate;
+    }
+
+    public void setCreatedate(Date createdate) {
+        this.createdate = createdate;
+    }
+
+    public String getCreateusername() {
+        return createusername;
+    }
+
+    public void setCreateusername(String createusername) {
+        this.createusername = createusername == null ? null : createusername.trim();
+    }
+
+    public Long getModifyuserid() {
+        return modifyuserid;
+    }
+
+    public void setModifyuserid(Long modifyuserid) {
+        this.modifyuserid = modifyuserid;
+    }
+
+    public Date getModifydate() {
+        return modifydate;
+    }
+
+    public void setModifydate(Date modifydate) {
+        this.modifydate = modifydate;
+    }
+
+    public String getModifyusername() {
+        return modifyusername;
+    }
+
+    public void setModifyusername(String modifyusername) {
+        this.modifyusername = modifyusername == null ? null : modifyusername.trim();
     }
 }

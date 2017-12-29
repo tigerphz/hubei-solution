@@ -14,13 +14,13 @@
     <name>system.manager.root</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>system-manager-core</module>
         <module>system-manager-domain</module>
         <module>system-manager-persist</module>
         <module>system-manager-model</module>
         <module>system-manager-utils</module>
         <module>system-manager-service</module>
         <module>system-manager-web</module>
+        <module>system-manager-service-api</module>
     </modules>
 
 </project>

@@ -1,47 +1,115 @@
 package system.manager.model;
 
-/***
- * 部门
- */
+import java.util.Date;
+
 public class DepartmentInfo {
+    private Long deptid;
 
-    private String DeptName;
+    private String deptname;
 
-    private String DeptDescription;
+    private Integer status;
 
-    private long ParentID;
+    private String description;
 
-    private int Status;
+    private Long parentid;
 
-    public String getDeptName() {
-        return DeptName;
+    private Long createuserid;
+
+    private Date createdate;
+
+    private String createusername;
+
+    private Long modifyuserid;
+
+    private Date modifydate;
+
+    private String modifyusername;
+
+    public Long getDeptid() {
+        return deptid;
     }
 
-    public void setDeptName(String deptName) {
-        DeptName = deptName;
+    public void setDeptid(Long deptid) {
+        this.deptid = deptid;
     }
 
-    public String getDeptDescription() {
-        return DeptDescription;
+    public String getDeptname() {
+        return deptname;
     }
 
-    public void setDeptDescription(String deptDescription) {
-        DeptDescription = deptDescription;
+    public void setDeptname(String deptname) {
+        this.deptname = deptname == null ? null : deptname.trim();
     }
 
-    public long getParentID() {
-        return ParentID;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setParentID(long parentID) {
-        ParentID = parentID;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
-    public int getStatus() {
-        return Status;
+    public String getDescription() {
+        return description;
     }
 
-    public void setStatus(int status) {
-        Status = status;
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
+    }
+
+    public Long getParentid() {
+        return parentid;
+    }
+
+    public void setParentid(Long parentid) {
+        this.parentid = parentid;
+    }
+
+    public Long getCreateuserid() {
+        return createuserid;
+    }
+
+    public void setCreateuserid(Long createuserid) {
+        this.createuserid = createuserid;
+    }
+
+    public Date getCreatedate() {
+        return createdate;
+    }
+
+    public void setCreatedate(Date createdate) {
+        this.createdate = createdate;
+    }
+
+    public String getCreateusername() {
+        return createusername;
+    }
+
+    public void setCreateusername(String createusername) {
+        this.createusername = createusername == null ? null : createusername.trim();
+    }
+
+    public Long getModifyuserid() {
+        return modifyuserid;
+    }
+
+    public void setModifyuserid(Long modifyuserid) {
+        this.modifyuserid = modifyuserid;
+    }
+
+    public Date getModifydate() {
+        return modifydate;
+    }
+
+    public void setModifydate(Date modifydate) {
+        this.modifydate = modifydate;
+    }
+
+    public String getModifyusername() {
+        return modifyusername;
+    }
+
+    public void setModifyusername(String modifyusername) {
+        this.modifyusername = modifyusername == null ? null : modifyusername.trim();
     }
 }

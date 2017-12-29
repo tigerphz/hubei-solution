@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="system.manager.persist.daomapper.SysUserInfoMapper">
+    <resultMap id="BaseResultMap" type="system.manager.model.SysUserInfo">
+        <result column="userid" jdbcType="BIGINT" property="userid"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="snowflake" jdbcType="VARCHAR" property="snowflake"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="passwordhash" jdbcType="VARCHAR" property="passwordhash"/>
+        <result column="passwordsalt" jdbcType="VARCHAR" property="passwordsalt"/>
+        <result column="gender" jdbcType="INTEGER" property="gender"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="cellphone" jdbcType="VARCHAR" property="cellphone"/>
+        <result column="identitycard" jdbcType="VARCHAR" property="identitycard"/>
+        <result column="fax" jdbcType="VARCHAR" property="fax"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="qq" jdbcType="VARCHAR" property="qq"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="deptid" jdbcType="BIGINT" property="deptid"/>
+        <result column="createuserid" jdbcType="BIGINT" property="createuserid"/>
+        <result column="createdate" jdbcType="TIMESTAMP" property="createdate"/>
+        <result column="createusername" jdbcType="VARCHAR" property="createusername"/>
+        <result column="modifyuserid" jdbcType="BIGINT" property="modifyuserid"/>
+        <result column="modifydate" jdbcType="TIMESTAMP" property="modifydate"/>
+        <result column="modifyusername" jdbcType="VARCHAR" property="modifyusername"/>
+    </resultMap>
+    <insert id="insert" parameterType="system.manager.model.SysUserInfo">
+        INSERT INTO t_sys_user (userid, username, snowflake,
+                                nickname, passwordhash, passwordsalt,
+                                gender, status, phone,
+                                cellphone, identitycard, fax,
+                                email, qq, address,
+                                deptid, createuserid, createdate,
+                                createusername, modifyuserid, modifydate,
+                                modifyusername)
+        VALUES (#{userid,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{snowflake,jdbcType=VARCHAR},
+                                           #{nickname,jdbcType=VARCHAR}, #{passwordhash,jdbcType=VARCHAR},
+                                           #{passwordsalt,jdbcType=VARCHAR},
+                                           #{gender,jdbcType=INTEGER}, #{status,jdbcType=INTEGER},
+                                           #{phone,jdbcType=VARCHAR},
+                                           #{cellphone,jdbcType=VARCHAR}, #{identitycard,jdbcType=VARCHAR},
+            #{fax,jdbcType=VARCHAR},
+            #{email,jdbcType=VARCHAR}, #{qq,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR},
+            #{deptid,jdbcType=BIGINT}, #{createuserid,jdbcType=BIGINT}, #{createdate,jdbcType=TIMESTAMP},
+            #{createusername,jdbcType=VARCHAR}, #{modifyuserid,jdbcType=BIGINT}, #{modifydate,jdbcType=TIMESTAMP},
+                #{modifyusername,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="system.manager.model.SysUserInfo">
+        insert into t_sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userid != null">
+                userid,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+            <if test="snowflake != null">
+                snowflake,
+            </if>
+            <if test="nickname != null">
+                nickname,
+            </if>
+            <if test="passwordhash != null">
+                passwordhash,
+            </if>
+            <if test="passwordsalt != null">
+                passwordsalt,
+            </if>
+            <if test="gender != null">
+                gender,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="cellphone != null">
+                cellphone,
+            </if>
+            <if test="identitycard != null">
+                identitycard,
+            </if>
+            <if test="fax != null">
+                fax,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="qq != null">
+                qq,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="deptid != null">
+                deptid,
+            </if>
+            <if test="createuserid != null">
+                createuserid,
+            </if>
+            <if test="createdate != null">
+                createdate,
+            </if>
+            <if test="createusername != null">
+                createusername,
+            </if>
+            <if test="modifyuserid != null">
+                modifyuserid,
+            </if>
+            <if test="modifydate != null">
+                modifydate,
+            </if>
+            <if test="modifyusername != null">
+                modifyusername,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userid != null">
+                #{userid,jdbcType=BIGINT},
+            </if>
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="snowflake != null">
+                #{snowflake,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="passwordhash != null">
+                #{passwordhash,jdbcType=VARCHAR},
+            </if>
+            <if test="passwordsalt != null">
+                #{passwordsalt,jdbcType=VARCHAR},
+            </if>
+            <if test="gender != null">
+                #{gender,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="phone != null">
+                #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="cellphone != null">
+                #{cellphone,jdbcType=VARCHAR},
+            </if>
+            <if test="identitycard != null">
+                #{identitycard,jdbcType=VARCHAR},
+            </if>
+            <if test="fax != null">
+                #{fax,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="qq != null">
+                #{qq,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="deptid != null">
+                #{deptid,jdbcType=BIGINT},
+            </if>
+            <if test="createuserid != null">
+                #{createuserid,jdbcType=BIGINT},
+            </if>
+            <if test="createdate != null">
+                #{createdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createusername != null">
+                #{createusername,jdbcType=VARCHAR},
+            </if>
+            <if test="modifyuserid != null">
+                #{modifyuserid,jdbcType=BIGINT},
+            </if>
+            <if test="modifydate != null">
+                #{modifydate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyusername != null">
+                #{modifyusername,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <select id="getSysUserInfoByUserId" resultMap="BaseResultMap">
+        SELECT *
+        FROM t_sys_user
+        WHERE userid = #{userId,jdbcType=BIGINT}
+    </select>
+</mapper>

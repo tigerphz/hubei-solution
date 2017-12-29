@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS t_department;
+CREATE TABLE t_department
+(
+  deptid BIGINT,
+  deptname VARCHAR(50),
+  status  INTEGER, #状态
+  description  VARCHAR(200),
+  parentid BIGINT,#父节点
+
+  createuserid BIGINT,
+  createdate DATETIME,
+  createusername VARCHAR(50),
+  modifyuserid BIGINT,
+  modifydate DATETIME,
+  modifyusername VARCHAR(50)
+);

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="system.manager.persist.daomapper.DepartmentInfoMapper">
+  <resultMap id="BaseResultMap" type="system.manager.model.DepartmentInfo">
+    <result column="deptid" jdbcType="BIGINT" property="deptid" />
+    <result column="deptname" jdbcType="VARCHAR" property="deptname" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="parentid" jdbcType="BIGINT" property="parentid" />
+    <result column="createuserid" jdbcType="BIGINT" property="createuserid" />
+    <result column="createdate" jdbcType="TIMESTAMP" property="createdate" />
+    <result column="createusername" jdbcType="VARCHAR" property="createusername" />
+    <result column="modifyuserid" jdbcType="BIGINT" property="modifyuserid" />
+    <result column="modifydate" jdbcType="TIMESTAMP" property="modifydate" />
+    <result column="modifyusername" jdbcType="VARCHAR" property="modifyusername" />
+  </resultMap>
+  <insert id="insert" parameterType="system.manager.model.DepartmentInfo">
+    insert into t_department (deptid, deptname, status, 
+      description, parentid, createuserid, 
+      createdate, createusername, modifyuserid, 
+      modifydate, modifyusername)
+    values (#{deptid,jdbcType=BIGINT}, #{deptname,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{description,jdbcType=VARCHAR}, #{parentid,jdbcType=BIGINT}, #{createuserid,jdbcType=BIGINT}, 
+      #{createdate,jdbcType=TIMESTAMP}, #{createusername,jdbcType=VARCHAR}, #{modifyuserid,jdbcType=BIGINT}, 
+      #{modifydate,jdbcType=TIMESTAMP}, #{modifyusername,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="system.manager.model.DepartmentInfo">
+    insert into t_department
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deptid != null">
+        deptid,
+      </if>
+      <if test="deptname != null">
+        deptname,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="parentid != null">
+        parentid,
+      </if>
+      <if test="createuserid != null">
+        createuserid,
+      </if>
+      <if test="createdate != null">
+        createdate,
+      </if>
+      <if test="createusername != null">
+        createusername,
+      </if>
+      <if test="modifyuserid != null">
+        modifyuserid,
+      </if>
+      <if test="modifydate != null">
+        modifydate,
+      </if>
+      <if test="modifyusername != null">
+        modifyusername,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deptid != null">
+        #{deptid,jdbcType=BIGINT},
+      </if>
+      <if test="deptname != null">
+        #{deptname,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null">
+        #{parentid,jdbcType=BIGINT},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=BIGINT},
+      </if>
+      <if test="createdate != null">
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createusername != null">
+        #{createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyuserid != null">
+        #{modifyuserid,jdbcType=BIGINT},
+      </if>
+      <if test="modifydate != null">
+        #{modifydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyusername != null">
+        #{modifyusername,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

@@ -27,12 +27,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.boco.hubei.solution</groupId>
-            <artifactId>system.manager.core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>

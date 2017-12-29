@@ -9,30 +9,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="centralized-plan-core" />
-        <module name="centralized-plan-domain" />
-        <module name="centralized-plan-model" />
-        <module name="centralized-plan-persist" />
-        <module name="centralized-plan-service" />
-        <module name="centralized-plan-utils" />
-        <module name="centralized-plan-web" />
         <module name="hubei-solution-eurekaserver" />
         <module name="hubei-solution-EurekaServer" />
+        <module name="hubei-solution-framework-common" />
         <module name="hubei-solution-framework-security" />
-        <module name="system-manager-core" />
         <module name="system-manager-domain" />
         <module name="system-manager-model" />
         <module name="system-manager-persist" />
         <module name="system-manager-service" />
+        <module name="system-manager-service-api" />
         <module name="system-manager-utils" />
         <module name="system-manager-web" />
-        <module name="user-manager-core" />
-        <module name="user-manager-domain" />
-        <module name="user-manager-model" />
-        <module name="user-manager-persist" />
         <module name="user-manager-root" />
-        <module name="user-manager-service" />
-        <module name="user-manager-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -47,6 +35,7 @@
       <module name="hubei-solution" target="1.5" />
       <module name="hubei-solution-eurekaserver" target="1.5" />
       <module name="hubei-solution-framework" target="1.5" />
+      <module name="hubei-solution-framework-common" target="1.5" />
       <module name="hubei-solution-framework-security" target="1.5" />
       <module name="hubei-solution-parent" target="1.5" />
       <module name="system-manager" target="1.5" />
@@ -55,6 +44,7 @@
       <module name="system-manager-model" target="1.5" />
       <module name="system-manager-persist" target="1.5" />
       <module name="system-manager-service" target="1.5" />
+      <module name="system-manager-service-api" target="1.5" />
       <module name="system-manager-utils" target="1.5" />
       <module name="system-manager-web" target="1.5" />
       <module name="user-manager" target="1.5" />
