@@ -1,5 +1,6 @@
 package system.manager.domain;
 
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -15,5 +16,9 @@ public class SysUserDomain {
 
     public SysUserInfo getSysUserInfoByUserId(Long userId) {
         return sysUserInfoDaoRepository.getSysUserInfoByUserId(userId);
+    }
+
+    public PageInfo<SysUserInfo> getSysUserInfoList() {
+        return sysUserInfoDaoRepository.getSysUserInfoList();
     }
 }

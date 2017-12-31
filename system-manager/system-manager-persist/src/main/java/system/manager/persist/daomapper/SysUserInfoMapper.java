@@ -1,5 +1,6 @@
 package system.manager.persist.daomapper;
 
+import com.github.pagehelper.Page;
 import system.manager.model.SysUserInfo;
 
 public interface SysUserInfoMapper {
@@ -8,4 +9,6 @@ public interface SysUserInfoMapper {
     int insertSelective(SysUserInfo record);
 
     SysUserInfo getSysUserInfoByUserId(Long userId);
+
+    Page<SysUserInfo> getSysUserInfoList();
 }

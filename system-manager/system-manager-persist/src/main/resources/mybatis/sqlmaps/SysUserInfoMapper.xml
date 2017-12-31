@@ -190,4 +190,8 @@
         FROM t_sys_user
         WHERE userid = #{userId,jdbcType=BIGINT}
     </select>
+
+    <select id="getSysUserInfoList" resultMap="BaseResultMap">
+        select * from t_sys_user
+    </select>
 </mapper>
