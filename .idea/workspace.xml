@@ -87,27 +87,17 @@
         <entry file="file://$PROJECT_DIR$/system-manager/system-manager-service/src/main/resources/application-dev.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-82">
-              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logback-spring.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="logback-spring.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/system-manager/system-manager-service/src/main/resources/logback-spring.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
               <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -416,17 +406,6 @@
             <path>
               <item name="hubei-solution" type="b2602c69:ProjectViewProjectNode" />
               <item name="hubei-solution" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hubei-solution" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hubei-solution" type="462c0819:PsiDirectoryNode" />
-              <item name="system-manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hubei-solution" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hubei-solution" type="462c0819:PsiDirectoryNode" />
-              <item name="system-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="system-manager-service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -752,7 +731,7 @@
       <workItem from="1514607214288" duration="13173000" />
       <workItem from="1514647132431" duration="605000" />
       <workItem from="1514647748492" duration="2103000" />
-      <workItem from="1514695490936" duration="1889000" />
+      <workItem from="1514695490936" duration="2022000" />
     </task>
     <task id="LOCAL-00001" summary="删除不必要的项目">
       <created>1512363391704</created>
@@ -789,7 +768,21 @@
       <option name="project" value="LOCAL" />
       <updated>1514697304098</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="基础功能搭建">
+      <created>1514697385823</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1514697385823</updated>
+    </task>
+    <task id="LOCAL-00007" summary="基础功能搭建">
+      <created>1514697459616</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514697459616</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -825,7 +818,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155450000" />
+    <option name="totallyTimeSpent" value="155583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,13 +924,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system-manager/system-manager-model/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system-manager/system-manager-model/src/main/java/system/manager/model/SysUserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1160,8 +1146,8 @@
         <state relative-caret-position="345">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1189,7 +1175,7 @@
         <state relative-caret-position="92">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1309,7 +1295,23 @@
     <entry file="file://$PROJECT_DIR$/system-manager/system-manager-service/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-82">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system-manager/system-manager-service/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-690">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1318,14 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
