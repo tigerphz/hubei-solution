@@ -50,3 +50,15 @@ hs_err_pid*
 将删除 system-manager/system-manager-service/target/
 将删除 system-manager/system-manager-web/system-manager-web.iml
 将删除 system-manager/system-manager-web/target/
+将删除 .idea/libraries/Maven__io_springfox_springfox_core_2_6_1.xml
+将删除 .idea/libraries/Maven__io_springfox_springfox_schema_2_6_1.xml
+将删除 .idea/libraries/Maven__io_springfox_springfox_spi_2_6_1.xml
+将删除 .idea/libraries/Maven__io_springfox_springfox_spring_web_2_6_1.xml
+将删除 .idea/libraries/Maven__io_springfox_springfox_swagger2_2_6_1.xml
+将删除 .idea/libraries/Maven__io_springfox_springfox_swagger_common_2_6_1.xml
+将删除 .idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_6_1.xml
+将删除 .idea/libraries/Maven__io_swagger_swagger_annotations_1_5_10.xml
+将删除 .idea/libraries/Maven__io_swagger_swagger_models_1_5_10.xml
+将删除 .idea/libraries/Maven__org_mapstruct_mapstruct_1_0_0_Final.xml
+将删除 .idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml
+将删除 .idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml

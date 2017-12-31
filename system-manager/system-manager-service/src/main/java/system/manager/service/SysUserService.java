@@ -1,6 +1,7 @@
 package system.manager.service;
 
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import system.manager.model.SysUserInfo;
 
 @RestController
 @RequestMapping("sysuser")
+@Api("sysuser相关API")
 public class SysUserService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -20,11 +22,18 @@ public class SysUserService {
     private SysUserDomain sysUserDomain;
 
     @GetMapping("/{userid}")
+    @ApiOperation("根据用户ID获取用户信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path", name = "userid", dataType = "Long", required = true, value = "用户ID")})
+    @ApiResponses({
+            @ApiResponse(code = 400, message = "参数填写不正确")
+    })
     public SysUserInfo getSysUserInfoByUserId(@PathVariable("userid") Long userId) {
         return sysUserDomain.getSysUserInfoByUserId(userId);
     }
 
     @GetMapping("/all")
+    @ApiOperation("分页获取用户信息")
     public PageInfo<SysUserInfo> getSysUserInfoList() {
         logger.debug("调用：getSysUserInfoList");
 
