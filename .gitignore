@@ -20,3 +20,29 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+将删除 .idea/dataSources/feee5154-e784-4b09-822e-274713bc1388/_src_/
+将删除 .idea/dataSources/feee5154-e784-4b09-822e-274713bc1388/_staging_/
+将删除 hubei-solution-framework/hubei-solution-framework-common/src/test/
+将删除 hubei-solution-framework/hubei-solution-framework-common/target/
+将删除 hubei-solution-framework/hubei-solution-framework-security/src/
+将删除 logs/
+将删除 system-manager/system-manager-domain/src/test/
+将删除 system-manager/system-manager-domain/target/classes/
+将删除 system-manager/system-manager-domain/target/generated-sources/
+将删除 system-manager/system-manager-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+将删除 system-manager/system-manager-model/src/test/
+将删除 system-manager/system-manager-model/target/classes/
+将删除 system-manager/system-manager-model/target/generated-sources/
+将删除 system-manager/system-manager-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+将删除 system-manager/system-manager-persist/src/test/
+将删除 system-manager/system-manager-persist/target/classes/application-persist.properties
+将删除 system-manager/system-manager-persist/target/classes/mybatis/sqlmaps/
+将删除 system-manager/system-manager-persist/target/classes/system/
+将删除 system-manager/system-manager-persist/target/generated-sources/
+将删除 system-manager/system-manager-persist/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+将删除 system-manager/system-manager-service-api/target/
+将删除 system-manager/system-manager-service/src/test/java/system/manager/service/
+将删除 system-manager/system-manager-utils/src/
+将删除 system-manager/system-manager-web/src/main/java/system/manager/web/controllers/
+将删除 system-manager/system-manager-web/src/main/resources/static/
+将删除 system-manager/system-manager-web/src/main/resources/templates/
